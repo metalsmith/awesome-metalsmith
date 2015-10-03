@@ -38,7 +38,7 @@ Inspired by the endless "awesome-*" lists out there.
 ## Examples
 
 ### Blogs
-- [Neustadt.fr](http://www.neustadt.fr)
+- [Neustadt.fr](http://www.neustadt.fr) (or [on GitHub](https://github.com/parimalsatyal/neustadt.fr-metalsmith))
 
 *More coming soon!*
 
