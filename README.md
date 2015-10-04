@@ -20,6 +20,7 @@ Inspired by the endless "awesome-*" lists out there.
 - [Rebuilding Keetology](http://keetology.com/blog/rebuilding-keetology), 10/21/2014
 - [Building a Blog with Metalsmith (azurelogic)](https://azurelogic.com/posts/building-a-blog-with-metalsmith/), 03/30/2015
 - [Building a Blog with Metalsmith (okaythree)](http://www.okaythree.com/2015/03/building-a-blog-with-metalsmith/), 03/12/2015
+- [Building a Blog with Metalsmith (blakeembrey)](blakeembrey.com/articles/2014/09/building-a-blog-with-metalsmith/), 09/2014
 - [Introduction to Metalsmith](http://blog.andyjiang.com/introduction-to-metalsmith/), 08/12/2015
 
 ### Building Plugins
@@ -36,6 +37,10 @@ Inspired by the endless "awesome-*" lists out there.
 
 ## Examples
 
-COMING SOON!!!
+### Blogs
+- [Neustadt.fr](http://www.neustadt.fr) (or [on GitHub](https://github.com/parimalsatyal/neustadt.fr-metalsmith))
+
+*More coming soon!*
+
 
 *Want to add or edit something? Submit a pull request!*
