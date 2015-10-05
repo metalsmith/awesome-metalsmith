@@ -15,13 +15,15 @@ Inspired by the endless "awesome-*" lists out there.
 - [Setting up the Forge (1/3)](http://www.robinthrift.com/posts/metalsmith-part-1-setting-up-the-forge/), 04/14/2014
 - [Shaping the Metal (2/3)](http://www.robinthrift.com/posts/metalsmith-part-2-shaping-the-metal/), 04/18/2014
 - [Refining our Tools (3/3)](http://www.robinthrift.com/posts/metalsmith-part-3-refining-our-tools/), 04/29/2014
+- [Building a Blog with Metalsmith (blakeembrey)](http://www.blakeembrey.com/articles/2014/09/building-a-blog-with-metalsmith/), 09/2014
 - [Metalsmith on GitHub Pages](http://devo.ps/blog/metalsmith-on-github-pages/), 09/05/2014
 - [Way of Metalsmith](http://blog.lecomte.me/posts/2014/way-of-metalsmith/), 09/09/2014
 - [Rebuilding Keetology](http://keetology.com/blog/rebuilding-keetology), 10/21/2014
 - [Building a Blog with Metalsmith (azurelogic)](https://azurelogic.com/posts/building-a-blog-with-metalsmith/), 03/30/2015
 - [Building a Blog with Metalsmith (okaythree)](http://www.okaythree.com/2015/03/building-a-blog-with-metalsmith/), 03/12/2015
-- [Building a Blog with Metalsmith (blakeembrey)](http://www.blakeembrey.com/articles/2014/09/building-a-blog-with-metalsmith/), 09/2014
 - [Introduction to Metalsmith](http://blog.andyjiang.com/introduction-to-metalsmith/), 08/12/2015
+- [Creating Static Sites with Metalsmith](http://www.petermorlion.com/creating-static-sites-with-metalsmith/), 09/18/2015
+- [Using Node and Metalsmith](http://www.petermorlion.com/using-node-and-metalsmith/), 10/04/2015
 
 ### Building Plugins
 
@@ -39,6 +41,9 @@ Inspired by the endless "awesome-*" lists out there.
 
 ### Blogs
 - [Neustadt.fr](http://www.neustadt.fr) (or [on GitHub](https://github.com/parimalsatyal/neustadt.fr-metalsmith))
+
+### Site
+- [RedStarIT](http://www.redstarit.net/) (or [on GitHub](https://github.com/petermorlion/RedStarITSite))
 
 *More coming soon!*
 
