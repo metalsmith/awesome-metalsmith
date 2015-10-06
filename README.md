@@ -44,6 +44,7 @@ Inspired by the endless "awesome-*" lists out there.
 
 ### Site
 - [RedStarIT](http://www.redstarit.net/) (or [on GitHub](https://github.com/petermorlion/RedStarITSite))
+- [blue Systems Research Group](http://blue.cse.buffalo.edu/) (or [on GitHub](https://github.com/blue-systems-group/code.metalsmith-blue))
 
 *More coming soon!*
 
