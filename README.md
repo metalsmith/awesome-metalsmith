@@ -45,6 +45,10 @@ Inspired by the endless "awesome-*" lists out there.
 ### Site
 - [RedStarIT](http://www.redstarit.net/) (or [on GitHub](https://github.com/petermorlion/RedStarITSite))
 
+### Repository
+
+- [Metalsmith-boilerplates](https://github.com/superwolff/metalsmith-boilerplates), a collection of ready to use boilerplates for various metalsmith plugins.
+
 *More coming soon!*
 
 
