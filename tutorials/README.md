@@ -4,8 +4,8 @@
 
 ## Installation
 
-# [CLI](./cli/README.md]
-- [./cli/first_steps.md]
+# [CLI](./cli/README.md)
+- [First Steps](./cli/first_steps.md)
 - etc.
 
 # Programatical use (better term required)
