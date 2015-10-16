@@ -8,7 +8,7 @@
 Inspired by the endless "awesome-*" lists out there.
 
 ## Tutorials
-
+- [Offical Community driven Docs](tutorials/README.md)
 ### Using Metalsmith
 
 - [Exploring Metalsmith](http://www.abm.io/implementing-a-metalsmith-plugin/), 06/06/2014
