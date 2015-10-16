@@ -4,7 +4,7 @@
 
 ## Installation
 
-# [CLI](./cli/README.md)
+# CLI
 - [First Steps](./cli/first_steps.md)
 - etc.
 
