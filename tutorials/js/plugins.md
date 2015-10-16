@@ -114,7 +114,7 @@ If you're not familiar with the [`debug` module](https://github.com/visionmedia/
 
 ## Options
 In our instance of the plugin, this is contents of `options`:
-```json
+```js
 {
     some: 'options',
     to: 'pass to the plugin'
@@ -126,7 +126,7 @@ Using `options` is a great way to enable configuration of your plugin.  If you d
 During the initialisation you can check for required parameters and throw an error if they're not there.
 
 ## Files
-```json
+```js
 {
     'first_file.md': {
         title: 'Swimming with Penguins',
