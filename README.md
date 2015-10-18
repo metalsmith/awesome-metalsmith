@@ -1,7 +1,7 @@
 
 ![metalsmith logo](http://i.imgur.com/g4fK8Zr.png)
 
-# Awesome Metalsmith [![Slack](https://img.shields.io/badge/Slack-Join%20Chat%20→-blue.svg?style=flat-square)](http://metalsmith-slack.herokuapp.com/)
+# Awesome Metalsmith [![Slack Status](http://metalsmith-slack.herokuapp.com/badge.svg)](http://metalsmith-slack.herokuapp.com/)
 
 > A curated list of awesome [Metalsmith](https://www.metalsmith.io) resources.
 
