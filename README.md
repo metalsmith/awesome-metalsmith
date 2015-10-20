@@ -26,6 +26,7 @@ Inspired by the endless "awesome-*" lists out there.
 - [Introduction to Metalsmith](http://blog.andyjiang.com/introduction-to-metalsmith/), 08/12/2015
 - [Creating Static Sites with Metalsmith](http://www.petermorlion.com/creating-static-sites-with-metalsmith/), 09/18/2015
 - [Using Node and Metalsmith](http://www.petermorlion.com/using-node-and-metalsmith/), 10/04/2015
+- [Building Technical Documentation with Metalsmith](https://segment.com/blog/building-technical-documentation-with-metalsmith/), 10/20/2015
 
 ### Building Plugins
 
