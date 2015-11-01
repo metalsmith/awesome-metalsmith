@@ -8,6 +8,7 @@ We shall start with the following file structure to get started:
 └── build.js
 ```
 
+
 `build.js`
 ```js
 var Metalsmith = require('metalsmith');
@@ -23,6 +24,7 @@ Metalsmith(__dirname)
     });
 ```
 
+
 `source/index.html`
 ```
 ---
@@ -32,10 +34,15 @@ title: Story time
 Once upon a time there was a...
 ```
 
+
 It's best to create the files on your system as you go through the tutorial so you can see it in action.
 
 Before running this we need to download Metalsmith via [npm](https://www.npmjs.com/) else we'd recieve an error about not being able to find the module `metalsmith`.
 
+If you're using Node.js version **`v0.12`** or below, it might be best to install version ^1.7.0 [or read the troubleshooting guide](https://github.com/segmentio/metalsmith#troubleshooting) for more information.
+```npm install --save metalsmith@^1.7.0```
+
+Otherwise install the latest version:
 ```npm install --save metalsmith```
 
 After this has been installed you can run the build.

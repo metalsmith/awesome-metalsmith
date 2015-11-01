@@ -22,13 +22,14 @@ Provide link or installation method.
 
 # Tutorials
 As Metalsmith can be used as a command line interface/tool (CLI) or directly with JavaScript there are two distinct tracks. However, they share commonality.
-## Command Line Interface/Tool - CLI 
-- [First Steps](./cli/first_steps.md) - Including installation.
-
 
 ## JavaScript - Programatical use (better term required).
 - [Introduction to Metalsmith JavaScript Interface](./js/introduction.md) - Including installation.
+- [Starting out with templates](./js/templates.md) - Using Handlebars.
 - [Getting to know Plugins](./js/plugins.md)
+
+## Command Line Interface/Tool - CLI 
+- [First Steps](./cli/first_steps.md) - Including installation.
 
 # Contributions
 We welcome contributions.
