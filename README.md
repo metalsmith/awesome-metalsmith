@@ -38,7 +38,7 @@ Inspired by the endless "awesome-*" lists out there.
 
 [Here](https://github.com/search?utf8=%E2%9C%93&q=metalsmith-&type=Repositories&ref=searchresults) is the GitHub query for "metalsmith".
 
-[Here](PLUGINS.md)
+[Here](PLUGINS.md) is a list of plugin links.
 
 [Here](http://www.metalsmith.io#the-plugins) are the plugins featured on the [Metalsmith.io](https://www.metalsmith.io) website. *If you want to add yours, [submit a pull request](https://github.com/segmentio/metalsmith.io/pulls)!*
 
