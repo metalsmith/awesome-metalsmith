@@ -1,0 +1,24 @@
+{
+  "name": "awesome-metalsmith",
+  "version": "1.0.0",
+  "description": "A curated list of awesome Metalsmith resources.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "fetch-plugins": "babel-node metalsmith-plugins.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lambtron/awesome-metalsmith.git"
+  },
+  "keywords": [
+    "metalsmith"
+  ],
+  "homepage": "https://github.com/lambtron/awesome-metalsmith#readme",
+  "dependencies": {
+    "plugin-links": "^0.3.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.0.15"
+  }
+}
