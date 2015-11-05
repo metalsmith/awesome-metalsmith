@@ -27,6 +27,7 @@ Inspired by the endless "awesome-*" lists out there.
 - [Creating Static Sites with Metalsmith](http://www.petermorlion.com/creating-static-sites-with-metalsmith/), 09/18/2015
 - [Using Node and Metalsmith](http://www.petermorlion.com/using-node-and-metalsmith/), 10/04/2015
 - [Building Technical Documentation with Metalsmith](https://segment.com/blog/building-technical-documentation-with-metalsmith/), 10/20/2015
+- [Mastering metalsmith: best practices for static sites](http://evocode.com/blog/mastering-metalsmith-best-practices-for-static-sites/), 11/4/2015
 
 ### Building Plugins
 
@@ -52,6 +53,7 @@ Inspired by the endless "awesome-*" lists out there.
 ### Repository
 
 - [Metalsmith-boilerplates](https://github.com/superwolff/metalsmith-boilerplates), a collection of ready to use boilerplates for various metalsmith plugins.
+- [Metalsmith-base](https://github.com/evocode/metalsmith-base), A base starter for a Metalsmith project used at [Evocode.com](http://evocode.com/)
 
 *More coming soon!*
 
