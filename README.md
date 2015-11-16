@@ -35,6 +35,7 @@ Inspired by the endless "awesome-*" lists out there.
 - [Creating a Metalsmith Tab Plugin](http://blog.krawaller.se/posts/creating-a-metalsmith-tag-plugin/), 08/09/2014
 - [Metalsmith Plugins](http://www.andrewgoodricke.com/blog/metalsmith-plugins/), 07/23/2015
 - [Metalsmith: Hover Plugin to Show Gifs](http://blog.andyjiang.com/metalsmith-hover-plugin-to-show-gifs/), 07/13/2015
+- [metalsmith-polyglot](http://visualcosita.xyz/post/metalsmith-polyglot/), 11/15/2015
 
 ## Plugins
 
