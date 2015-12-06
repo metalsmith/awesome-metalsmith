@@ -53,6 +53,7 @@ Inspired by the endless "awesome-*" lists out there.
 
 ### Blogs
 - [Neustadt.fr](http://www.neustadt.fr) (or [on GitHub](https://github.com/parimalsatyal/neustadt.fr-metalsmith))
+- [mrkiffie.com](http://mrkiffie.com) (or [on GitHub](https://github.com/mrkiffie/mrkiffie.com))
 
 ### Site
 - [RedStarIT](http://www.redstarit.net/) (or [on GitHub](https://github.com/petermorlion/RedStarITSite))
