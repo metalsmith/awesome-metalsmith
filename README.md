@@ -23,7 +23,7 @@ Inspired by the endless "awesome-*" lists out there.
 - [Rebuilding Keetology](http://keetology.com/blog/rebuilding-keetology), 10/21/2014
 - [Building a Blog with Metalsmith (azurelogic)](https://azurelogic.com/posts/building-a-blog-with-metalsmith/), 03/30/2015
 - [Building a Blog with Metalsmith (okaythree)](http://www.okaythree.com/2015/03/building-a-blog-with-metalsmith/), 03/12/2015
-- [Building a Blog in ES6 with Metalsmith (cameronjroe)](http://cameronjroe.com/writing/building-a-blog-in-es6-with-metalsmith/) 11/05/2015
+- [Building a Blog in ES6 with Metalsmith (cameronjroe)](http://cameronjroe.com/blog/building-a-blog-in-es6-with-metalsmith/) 11/05/2015
 - [Introduction to Metalsmith](http://blog.andyjiang.com/introduction-to-metalsmith/), 08/12/2015
 - [Creating Static Sites with Metalsmith](http://www.petermorlion.com/creating-static-sites-with-metalsmith/), 09/18/2015
 - [Using Node and Metalsmith](http://www.petermorlion.com/using-node-and-metalsmith/), 10/04/2015
