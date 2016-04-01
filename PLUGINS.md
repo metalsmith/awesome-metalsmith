@@ -384,7 +384,6 @@
 - [metalsmith-search-meta](https://github.com/sarahhenderson/metalsmith-search-meta)
 - [metalsmith-batch-dom](https://github.com/krambuhl/metalsmith-batch-dom)
 - [metalsmith-layouts-test](https://github.com/saneef/metalsmith-layouts-test)
-- [metalsmith-yaml2json](https://github.com/nicklasmoeller/metalsmith-yaml2json)
 - [metalsmith-build-date](https://github.com/sarahhenderson/metalsmith-build-date)
 - [metalsmith-gulp-boilerplate](https://github.com/radiovisual/metalsmith-gulp-boilerplate)
 - [metalsmith-external-metadata](https://github.com/mrajo/metalsmith-external-metadata)
