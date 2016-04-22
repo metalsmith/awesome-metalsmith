@@ -12,7 +12,7 @@ Inspired by the endless "awesome-*" lists out there.
 - [Official Community driven Docs](tutorials/README.md)
 
 ### Using Metalsmith
-
+- [How to Create a Static Site with Metalsmith](http://www.sitepoint.com/create-static-site-metalsmith/), 21/04/2016
 - [Exploring Metalsmith](http://www.abm.io/implementing-a-metalsmith-plugin/), 06/06/2014
 - [Setting up the Forge (1/3)](http://www.robinthrift.com/posts/metalsmith-part-1-setting-up-the-forge/), 04/14/2014
 - [Shaping the Metal (2/3)](http://www.robinthrift.com/posts/metalsmith-part-2-shaping-the-metal/), 04/18/2014
