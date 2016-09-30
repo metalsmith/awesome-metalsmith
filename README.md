@@ -31,6 +31,7 @@ Inspired by the endless "awesome-*" lists out there.
 - [Building Technical Documentation with Metalsmith](https://segment.com/blog/building-technical-documentation-with-metalsmith/), 10/20/2015
 - [Mastering metalsmith: best practices for static sites](http://evocode.com/blog/mastering-metalsmith-best-practices-for-static-sites/), 11/4/2015
 - [Rebuilding davidosomething.com as a static site](http://davidosomething.com/blog/rebuilding-davidosomethingcom-as-a-static-site/), 12/28/2015
+- [A Beginner's Guide to Crafting a Blog with Metalsmith](https://neustadt.fr/essays/crafting-a-simple-blog-with-metalsmith/), 09/30/2016
 
 
 ### Building Plugins
@@ -55,7 +56,7 @@ Inspired by the endless "awesome-*" lists out there.
 ## Examples
 
 ### Blogs
-- [Neustadt.fr](http://www.neustadt.fr) (or [on GitHub](https://github.com/parimalsatyal/neustadt.fr-metalsmith))
+- [Neustadt.fr](https://neustadt.fr) (or [on GitHub](https://github.com/parimalsatyal/neustadt.fr-metalsmith))
 - [mrkiffie.com](http://mrkiffie.com) (or [on GitHub](https://github.com/mrkiffie/mrkiffie.com))
 
 ### Site
