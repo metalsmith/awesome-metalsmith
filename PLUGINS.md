@@ -423,3 +423,4 @@
 - [metalsmith-split-filename-dates](https://github.com/morhekil/metalsmith-split-filename-dates)
 - [metalsmith-start-kit](https://github.com/karneaud/metalsmith-start-kit)
 - [metalsmith-source-paths](https://github.com/madeofpeople/metalsmith-source-paths)
+- [metalsmith-css-packer](https://github.com/stafyniaksacha/metalsmith-css-packer)
