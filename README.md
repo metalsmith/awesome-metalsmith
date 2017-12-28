@@ -65,7 +65,7 @@ Inspired by the endless "awesome-*" lists out there.
 
 ### Repository
 
-- [Metalsmith-boilerplates](https://github.com/superwolff/metalsmith-boilerplates), a collection of ready to use boilerplates for various metalsmith plugins.
+- [Metalsmith-boilerplates](https://github.com/doubleshow/metalsmith-boilerplates), a collection of ready to use boilerplates for various metalsmith plugins.
 - [Metalsmith-base](https://github.com/evocode/metalsmith-base), A base starter for a Metalsmith project used at [Evocode.com](http://evocode.com/)
 
 *More coming soon!*
