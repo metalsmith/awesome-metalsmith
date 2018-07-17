@@ -13,6 +13,7 @@ Inspired by the endless "awesome-*" lists out there.
 
 ### Using Metalsmith
 
+- [Metalsmith, Layouts and Nunjucks](http://www.glinka.co/blog/metalsmith-layouts-nunjucks/), 06/18/2018
 - [Exploring Metalsmith](http://www.abm.io/implementing-a-metalsmith-plugin/), 06/06/2014
 - [Setting up the Forge (1/3)](http://www.robinthrift.com/posts/metalsmith-part-1-setting-up-the-forge/), 04/14/2014
 - [Shaping the Metal (2/3)](http://www.robinthrift.com/posts/metalsmith-part-2-shaping-the-metal/), 04/18/2014
