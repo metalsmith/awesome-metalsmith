@@ -424,3 +424,4 @@
 - [metalsmith-start-kit](https://github.com/karneaud/metalsmith-start-kit)
 - [metalsmith-source-paths](https://github.com/madeofpeople/metalsmith-source-paths)
 - [metalsmith-js-packer](https://github.com/stafyniaksacha/metalsmith-js-packer)
+- [metalsmith-algolia](https://github.com/stafyniaksacha/metalsmith-algolia)
