@@ -12,7 +12,6 @@ Inspired by the endless "awesome-*" lists out there.
 - [Official Community driven Docs](tutorials/README.md)
 
 ### Using Metalsmith
-
 - [Exploring Metalsmith](http://www.abm.io/implementing-a-metalsmith-plugin/), 06/06/2014
 - [Setting up the Forge (1/3)](http://www.robinthrift.com/posts/metalsmith-part-1-setting-up-the-forge/), 04/14/2014
 - [Shaping the Metal (2/3)](http://www.robinthrift.com/posts/metalsmith-part-2-shaping-the-metal/), 04/18/2014
@@ -31,6 +30,7 @@ Inspired by the endless "awesome-*" lists out there.
 - [Building Technical Documentation with Metalsmith](https://segment.com/blog/building-technical-documentation-with-metalsmith/), 10/20/2015
 - [Mastering metalsmith: best practices for static sites](http://evocode.com/blog/mastering-metalsmith-best-practices-for-static-sites/), 11/4/2015
 - [Rebuilding davidosomething.com as a static site](http://davidosomething.com/blog/rebuilding-davidosomethingcom-as-a-static-site/), 12/28/2015
+- [How to Create a Static Site with Metalsmith](http://www.sitepoint.com/create-static-site-metalsmith/), 21/04/2016
 
 
 ### Building Plugins
