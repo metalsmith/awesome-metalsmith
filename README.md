@@ -12,12 +12,11 @@ Inspired by the endless "awesome-*" lists out there.
 - [Official Community driven Docs](tutorials/README.md)
 
 ### Using Metalsmith
-
 - [Metalsmith, Layouts and Nunjucks](http://www.glinka.co/blog/metalsmith-layouts-nunjucks/), 06/18/2018
 - [Exploring Metalsmith](http://www.abm.io/implementing-a-metalsmith-plugin/), 06/06/2014
-- [Setting up the Forge (1/3)](http://www.robinthrift.com/posts/metalsmith-part-1-setting-up-the-forge/), 04/14/2014
-- [Shaping the Metal (2/3)](http://www.robinthrift.com/posts/metalsmith-part-2-shaping-the-metal/), 04/18/2014
-- [Refining our Tools (3/3)](http://www.robinthrift.com/posts/metalsmith-part-3-refining-our-tools/), 04/29/2014
+- [Setting up the Forge (1/3)](http://blog.robinthrift.com/2014/04/14/metalsmith-part-1-setting-up-the-forge/), 04/14/2014
+- [Shaping the Metal (2/3)](http://blog.robinthrift.com/2014/04/18/metalsmith-part-2-shaping-the-metal/), 04/18/2014
+- [Refining our Tools (3/3)](http://blog.robinthrift.com/2014/04/29/metalsmith-part-3-refining-our-tools/), 04/29/2014
 - [Building a Blog with Metalsmith (blakeembrey)](http://www.blakeembrey.com/articles/2014/09/building-a-blog-with-metalsmith/), 09/2014
 - [Metalsmith on GitHub Pages](http://devo.ps/blog/metalsmith-on-github-pages/), 09/05/2014
 - [Way of Metalsmith](http://blog.lecomte.me/posts/2014/way-of-metalsmith/), 09/09/2014
@@ -25,13 +24,14 @@ Inspired by the endless "awesome-*" lists out there.
 - [Building a Blog with Metalsmith (azurelogic)](https://azurelogic.com/posts/building-a-blog-with-metalsmith/), 03/30/2015
 - [Building a Blog with Metalsmith (okaythree)](http://www.okaythree.com/2015/03/building-a-blog-with-metalsmith/), 03/12/2015
 - [Understanding Metalsmith](http://alecroy.me/2015/05/16/understanding-metalsmith.html), 5/16/2015
-- [Building a Blog in ES6 with Metalsmith (cameronjroe)](http://cameronjroe.com/blog/building-a-blog-in-es6-with-metalsmith/) 11/05/2015
 - [Introduction to Metalsmith](http://blog.andyjiang.com/introduction-to-metalsmith/), 08/12/2015
 - [Creating Static Sites with Metalsmith](http://www.petermorlion.com/creating-static-sites-with-metalsmith/), 09/18/2015
 - [Using Node and Metalsmith](http://www.petermorlion.com/using-node-and-metalsmith/), 10/04/2015
 - [Building Technical Documentation with Metalsmith](https://segment.com/blog/building-technical-documentation-with-metalsmith/), 10/20/2015
 - [Mastering metalsmith: best practices for static sites](http://evocode.com/blog/mastering-metalsmith-best-practices-for-static-sites/), 11/4/2015
 - [Rebuilding davidosomething.com as a static site](http://davidosomething.com/blog/rebuilding-davidosomethingcom-as-a-static-site/), 12/28/2015
+- [A Beginner's Guide to Crafting a Blog with Metalsmith](https://neustadt.fr/essays/crafting-a-simple-blog-with-metalsmith/), 09/30/2016
+- [How to Create a Static Site with Metalsmith](http://www.sitepoint.com/create-static-site-metalsmith/), 21/04/2016
 
 
 ### Building Plugins
@@ -56,13 +56,16 @@ Inspired by the endless "awesome-*" lists out there.
 ## Examples
 
 ### Blogs
-- [Neustadt.fr](http://www.neustadt.fr) (or [on GitHub](https://github.com/parimalsatyal/neustadt.fr-metalsmith))
+- [Neustadt.fr](https://neustadt.fr) (or [on GitHub](https://github.com/parimalsatyal/neustadt.fr-metalsmith))
 - [mrkiffie.com](http://mrkiffie.com) (or [on GitHub](https://github.com/mrkiffie/mrkiffie.com))
+- [damien.pobel.fr](http://damien.pobel.fr) (or [on GitHub](http://damien.pobel.fr/)
 
 ### Site
 - [RedStarIT](http://www.redstarit.net/) (or [on GitHub](https://github.com/petermorlion/RedStarITSite))
 - [blue Systems Research Group](http://blue.cse.buffalo.edu/) (or [on GitHub](https://github.com/blue-systems-group/code.metalsmith-blue))
 - [Revermont.bike](http://vtt.revermont.bike/) (or [on GitHub](https://github.com/dpobel/revermont.bike))
+- [docs.kuzzle.io](http://docs.kuzzle.io/) (or [on GitHub](https://github.com/kuzzle/documentation))
+- [`ops-class.org` Instructional Website](http://www.ops-class.org/) (or [on GitHub](https://github.com/ops-class/www))
 
 ### Repository
 
