@@ -13,9 +13,9 @@ Inspired by the endless "awesome-*" lists out there.
 
 ### Using Metalsmith
 - [Exploring Metalsmith](http://www.abm.io/implementing-a-metalsmith-plugin/), 06/06/2014
-- [Setting up the Forge (1/3)](http://www.robinthrift.com/posts/metalsmith-part-1-setting-up-the-forge/), 04/14/2014
-- [Shaping the Metal (2/3)](http://www.robinthrift.com/posts/metalsmith-part-2-shaping-the-metal/), 04/18/2014
-- [Refining our Tools (3/3)](http://www.robinthrift.com/posts/metalsmith-part-3-refining-our-tools/), 04/29/2014
+- [Setting up the Forge (1/3)](http://blog.robinthrift.com/2014/04/14/metalsmith-part-1-setting-up-the-forge/), 04/14/2014
+- [Shaping the Metal (2/3)](http://blog.robinthrift.com/2014/04/18/metalsmith-part-2-shaping-the-metal/), 04/18/2014
+- [Refining our Tools (3/3)](http://blog.robinthrift.com/2014/04/29/metalsmith-part-3-refining-our-tools/), 04/29/2014
 - [Building a Blog with Metalsmith (blakeembrey)](http://www.blakeembrey.com/articles/2014/09/building-a-blog-with-metalsmith/), 09/2014
 - [Metalsmith on GitHub Pages](http://devo.ps/blog/metalsmith-on-github-pages/), 09/05/2014
 - [Way of Metalsmith](http://blog.lecomte.me/posts/2014/way-of-metalsmith/), 09/09/2014
