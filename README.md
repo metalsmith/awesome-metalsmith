@@ -12,6 +12,7 @@ Inspired by the endless "awesome-*" lists out there.
 - [Official Community driven Docs](tutorials/README.md)
 
 ### Using Metalsmith
+- [Metalsmith, Layouts and Nunjucks](http://www.glinka.co/blog/metalsmith-layouts-nunjucks/), 06/18/2018
 - [Setting up the Forge (1/3)](http://www.robinthrift.com/post/metalsmith-part-1-setting-up-the-forge/), 04/14/2014
 - [Shaping the Metal (2/3)](http://www.robinthrift.com/post/metalsmith-part-2-shaping-the-metal/), 04/18/2014
 - [Refining our Tools (3/3)](http://www.robinthrift.com/post/metalsmith-part-3-refining-our-tools/), 04/29/2014
