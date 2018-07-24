@@ -30,6 +30,8 @@ Inspired by the endless "awesome-*" lists out there.
 - [Rebuilding davidosomething.com as a static site](http://davidosomething.com/blog/rebuilding-davidosomethingcom-as-a-static-site/), 12/28/2015
 - [A Beginner's Guide to Crafting a Blog with Metalsmith](https://neustadt.fr/essays/crafting-a-simple-blog-with-metalsmith/), 09/30/2016
 - [How to Create a Static Site with Metalsmith](http://www.sitepoint.com/create-static-site-metalsmith/), 21/04/2016
+- [5 Reasons to Choose Metalsmith](https://vitaliy-bobrov.github.io/blog/five-reasons-choose-metalsmith/), 19/01/2017
+- [Adding Comments to Metalsmith](https://vitaliy-bobrov.github.io/blog/adding-comments-to-metalsmith/), 30/01/2017
 
 
 ### Building Plugins
