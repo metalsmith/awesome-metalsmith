@@ -6,7 +6,7 @@ This tutorial follows on from the [Introduction to Metalsmith JavaScript Interfa
 
 Lets install our first Metalsmith plugin ([metalsmith-layouts](https://github.com/superwolff/metalsmith-layouts)) and out templating engine - [Handlebars](http://handlebarsjs.com/):
 ```
-npm install --save handlebars metalsmith-layouts
+npm install --save handlebars metalsmith-layouts jstransformer-handlebars
 ```
 This will install them both.
 
