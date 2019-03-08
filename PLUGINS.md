@@ -404,8 +404,6 @@
 - [metalsmith-prismic-gub](https://github.com/everydayhero/metalsmith-prismic-gub)
 - [metalsmith-glob-meta](https://github.com/ksmithut/metalsmith-glob-meta)
 - [metalsmith-jade-templater](https://github.com/claycarpenter/metalsmith-jade-templater)
-- [metalsmith-tc-atom](https://github.com/tcurdt/metalsmith-tc-atom)
-- [metalsmith-tc-sitemap](https://github.com/tcurdt/metalsmith-tc-sitemap)
 - [metalsmith-project-template](https://github.com/fellswoop/metalsmith-project-template)
 - [metalsmith-date-index](https://github.com/mrajo/metalsmith-date-index)
 - [metalsmith-markdown-desktop](https://github.com/melvin0008/metalsmith-markdown-desktop)
