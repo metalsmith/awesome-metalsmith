@@ -1,4 +1,3 @@
-# Metalsmith Plugins
 
 - [metalsmith-albums](https://github.com/callum/metalsmith-albums)
 - [metalsmith-algolia](https://github.com/stafyniaksacha/metalsmith-algolia)
@@ -207,6 +206,7 @@
 - [metalsmith-phantom](https://github.com/jcblw/metalsmith-phantom)
 - [metalsmith-placeholder](https://github.com/mattly/metalsmith-placeholder)
 - [metalsmith-playground](https://github.com/maxild/metalsmith-playground)
+# Metalsmith Plugins
 - [metalsmith-pooleapp](https://github.com/dpobel/metalsmith-pooleapp)
 - [metalsmith-postcss](https://github.com/axa-ch/metalsmith-postcss)
 - [metalsmith-prefix](https://github.com/rosszurowski/metalsmith-prefix)
