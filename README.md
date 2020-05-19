@@ -55,8 +55,7 @@ Inspired by the endless "awesome-*" lists out there.
 ## Examples
 
 ### Blogs
-- [Neustadt.fr](https://neustadt.fr) (or [on GitHub](https://github.com/parimalsatyal/neustadt.fr-metalsmith))
-- [mrkiffie.com](http://mrkiffie.com) (or [on GitHub](https://github.com/mrkiffie/mrkiffie.com))
+- [mrkiffie.com](http://mrkiffie.com) (or [onuil GitHub](https://github.com/mrkiffie/mrkiffie.com))
 - [damien.pobel.fr](http://damien.pobel.fr) (or [on GitHub](http://damien.pobel.fr/)
 
 ### Site
