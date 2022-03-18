@@ -60,7 +60,7 @@ Inspired by the endless "awesome-*" lists out there.
 
 ## Used by
 - [NodeJS website](https://nodejs.org)
-- [Moleculer (microservice framework for Node)](CLI: https://moleculer.services/docs/0.14/moleculer-cli.html)
+- [Moleculer (microservice framework for Node)(CLI](https://moleculer.services/docs/0.14/moleculer-cli.html)
 - [DooringX (D&D software development app) CLI](https://github.com/H5-Dooring/dooringx/blob/main/packages/dooringx-cli/src/modifyTemplate.ts)
 - [Leo generator package (cross-dept template scaffolder)](https://github.com/JDFED/leo)
 - [Vue CLI until v2 (later replaced with vuepress)](https://github.com/vuejs/vue-cli/tree/v2.9.3)
