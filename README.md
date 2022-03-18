@@ -7,10 +7,9 @@
 
 Inspired by the endless "awesome-*" lists out there.
 
-## Tutorials/Blogposts
-
 - [Official Community driven Docs](tutorials/README.md)
 
+## Tutorials/Blogposts
 - [Building flexible page layouts for Metalsmith](https://www.glinka.co/blog/building-flexible-page-layouts/), 03/18/2022
 - [Building a responsive/progressive image component](https://www.glinka.co/blog/building-responsive-progressive-image-component/), 03/10/2022
 - [Metalsmith, Layouts and Nunjucks](http://www.glinka.co/blog/metalsmith-layouts-nunjucks/), 06/18/2018
@@ -60,11 +59,16 @@ Inspired by the endless "awesome-*" lists out there.
 - [generator-metalsmith](https://github.com/hariadi/generator-metalsmith)
 
 ## Used by
-[NodeJS website](https://nodejs.org)
-[Moleculer (microservice framework for Node)](CLI: https://moleculer.services/docs/0.14/moleculer-cli.html)
-[DooringX (D&D software development app) CLI](https://github.com/H5-Dooring/dooringx/blob/main/packages/dooringx-cli/src/modifyTemplate.ts)
-[Leo generator package (cross-dept template scaffolder)](https://github.com/JDFED/leo)
-[Vue CLI until v2 (later replaced with vuepress)](https://github.com/vuejs/vue-cli/tree/v2.9.3)
+- [NodeJS website](https://nodejs.org)
+- [Moleculer (microservice framework for Node)](CLI: https://moleculer.services/docs/0.14/moleculer-cli.html)
+- [DooringX (D&D software development app) CLI](https://github.com/H5-Dooring/dooringx/blob/main/packages/dooringx-cli/src/modifyTemplate.ts)
+- [Leo generator package (cross-dept template scaffolder)](https://github.com/JDFED/leo)
+- [Vue CLI until v2 (later replaced with vuepress)](https://github.com/vuejs/vue-cli/tree/v2.9.3)
+
+## Listings
+- [Top 20 Static Site Generators Of 2022](https://www.intuz.com/top-static-site-generators)
+- [10 Most Popular Static Site Generators in 2021](https://superdevresources.com/static-site-generators/)
+- [Metalsmith on libhunt](https://nodejs.libhunt.com/metalsmith-alternatives)
 
 ## Examples
 
@@ -80,7 +84,6 @@ Inspired by the endless "awesome-*" lists out there.
 - [docs.kuzzle.io](http://docs.kuzzle.io/) (or [on GitHub](https://github.com/kuzzle/documentation))
 - [`ops-class.org` Instructional Website](http://www.ops-class.org/) (or [on GitHub](https://github.com/ops-class/www))
 
-*More coming soon!*
 
 
 *Want to add or edit something? Submit a pull request!*
