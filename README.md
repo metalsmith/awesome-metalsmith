@@ -12,7 +12,9 @@ Inspired by the endless "awesome-*" lists out there.
 ## Tutorials/Blogposts
 - [Building flexible page layouts for Metalsmith](https://www.glinka.co/blog/building-flexible-page-layouts/), 03/18/2022
 - [Building a responsive/progressive image component](https://www.glinka.co/blog/building-responsive-progressive-image-component/), 03/10/2022
+- [How Static Site Generators Work with Contentful](https://www.webstacks.com/blog/contentful-static-site-generators), 17/12/2021
 - [Metalsmith, Layouts and Nunjucks](http://www.glinka.co/blog/metalsmith-layouts-nunjucks/), 06/18/2018
+- [Switching from Jekyll to Metalsmith - Post Mortem](https://bengsfort.github.io/articles/metalsmith-blog-refactor/), 05/14/2017
 - [Setting up the Forge (1/3)](http://www.robinthrift.com/post/metalsmith-part-1-setting-up-the-forge/), 04/14/2014
 - [Shaping the Metal (2/3)](http://www.robinthrift.com/post/metalsmith-part-2-shaping-the-metal/), 04/18/2014
 - [Refining our Tools (3/3)](http://www.robinthrift.com/post/metalsmith-part-3-refining-our-tools/), 04/29/2014
