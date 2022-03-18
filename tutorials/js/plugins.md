@@ -1,7 +1,7 @@
 # Everything's a plugin
 As everything is a plugin in Metalsmith, it's really useful to understand them a bit.  Luckily, they are extremely simple and once you know the basics you can dig into published plugins and understand how they work too.
 
-The following code is a valid plugin, however it does absolutely.
+The following code is a valid plugin, however it does absolutely nothing.
 
 <kbd>modules/my_plugin.js</kbd>
 ```javascript
