@@ -1,17 +1,16 @@
 
 ![metalsmith logo](http://i.imgur.com/g4fK8Zr.png)
 
-# Awesome Metalsmith [![Slack Status](http://metalsmith-slack.herokuapp.com/badge.svg)](http://metalsmith-slack.herokuapp.com/)
+# Awesome Metalsmith
 
 > A curated list of awesome [Metalsmith](https://www.metalsmith.io) resources.
 
 Inspired by the endless "awesome-*" lists out there.
 
-## Tutorials
+## Tutorials/Blogposts
 
 - [Official Community driven Docs](tutorials/README.md)
 
-### Using Metalsmith
 - [Building flexible page layouts for Metalsmith](https://www.glinka.co/blog/building-flexible-page-layouts/), 03/18/2022
 - [Building a responsive/progressive image component](https://www.glinka.co/blog/building-responsive-progressive-image-component/), 03/10/2022
 - [Metalsmith, Layouts and Nunjucks](http://www.glinka.co/blog/metalsmith-layouts-nunjucks/), 06/18/2018
@@ -59,6 +58,13 @@ Inspired by the endless "awesome-*" lists out there.
 ## Generator
 
 - [generator-metalsmith](https://github.com/hariadi/generator-metalsmith)
+
+## Used by
+[NodeJS website](https://nodejs.org)
+[Moleculer (microservice framework for Node)](CLI: https://moleculer.services/docs/0.14/moleculer-cli.html)
+[DooringX (D&D software development app) CLI](https://github.com/H5-Dooring/dooringx/blob/main/packages/dooringx-cli/src/modifyTemplate.ts)
+[Leo generator package (cross-dept template scaffolder)](https://github.com/JDFED/leo)
+[Vue CLI until v2 (later replaced with vuepress)](https://github.com/vuejs/vue-cli/tree/v2.9.3)
 
 ## Examples
 
