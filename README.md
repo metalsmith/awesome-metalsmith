@@ -46,6 +46,7 @@ Inspired by the endless "awesome-*" lists out there.
 - [Metalsmith bare-bones starter](https://github.com/wernerglinka/metalsmith-bare-bones-starter)
 - [Metalsmith blog starter](https://github.com/wernerglinka/metalsmith-blog-starter)
 - [Metalsmith company starter](https://github.com/wernerglinka/metalsmith-company-starter)
+- [Metalsmith-base](https://github.com/evocode/metalsmith-base), A base starter for a Metalsmith project used at [Evocode.com](http://evocode.com/)
 
 ## Plugins
 
@@ -72,11 +73,6 @@ Inspired by the endless "awesome-*" lists out there.
 - [Revermont.bike](http://vtt.revermont.bike/) (or [on GitHub](https://github.com/dpobel/revermont.bike))
 - [docs.kuzzle.io](http://docs.kuzzle.io/) (or [on GitHub](https://github.com/kuzzle/documentation))
 - [`ops-class.org` Instructional Website](http://www.ops-class.org/) (or [on GitHub](https://github.com/ops-class/www))
-
-### Repository
-
-- [Metalsmith-boilerplates](https://github.com/ismay/metalsmith-boilerplates), a collection of ready to use boilerplates for various metalsmith plugins.
-- [Metalsmith-base](https://github.com/evocode/metalsmith-base), A base starter for a Metalsmith project used at [Evocode.com](http://evocode.com/)
 
 *More coming soon!*
 
