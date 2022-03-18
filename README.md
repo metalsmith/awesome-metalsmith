@@ -12,6 +12,8 @@ Inspired by the endless "awesome-*" lists out there.
 - [Official Community driven Docs](tutorials/README.md)
 
 ### Using Metalsmith
+- [Building flexible page layouts for Metalsmith](https://www.glinka.co/blog/building-flexible-page-layouts/), 03/18/2022
+- [Building a responsive/progressive image component](https://www.glinka.co/blog/building-responsive-progressive-image-component/), 03/10/2022
 - [Metalsmith, Layouts and Nunjucks](http://www.glinka.co/blog/metalsmith-layouts-nunjucks/), 06/18/2018
 - [Setting up the Forge (1/3)](http://www.robinthrift.com/post/metalsmith-part-1-setting-up-the-forge/), 04/14/2014
 - [Shaping the Metal (2/3)](http://www.robinthrift.com/post/metalsmith-part-2-shaping-the-metal/), 04/18/2014
