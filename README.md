@@ -96,8 +96,10 @@ _Inspired by the endless "awesome-\*" lists out there._
 - [Creating a Metalsmith Tab Plugin](http://blog.krawaller.se/posts/creating-a-metalsmith-tag-plugin/), 08/09/2014
 - [metalsmith-polyglot](http://visualcosita.xyz/post/metalsmith-polyglot/), 11/15/2015
 
-## Starters
+## Community Starters
 
+- [Metasmith2025 Structured Content Starter](https://github.com/wernerglinka/metalsmith2025-structured-content-starter)
+- [Metalsmith2025 Simple Starter](https://github.com/wernerglinka/metalsmith2025-simple-starter)
 - [Metalsmith bare-bones starter](https://github.com/wernerglinka/metalsmith-bare-bones-starter)
 - [Metalsmith blog starter](https://github.com/wernerglinka/metalsmith-blog-starter)
 - [Metalsmith company starter](https://github.com/wernerglinka/metalsmith-company-starter)
