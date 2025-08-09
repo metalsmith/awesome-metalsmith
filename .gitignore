@@ -1,2 +1,6 @@
 node_modules
 .DS_Store
+plugin-health-report.json
+
+# Temporary files from health checker
+*.backup
