@@ -125,12 +125,21 @@ To help keep the plugin list current and accurate, this repository includes a he
 
 The script analyzes all plugins for:
 
+**Health Analysis:**
 - Recent commit activity
 - npm download statistics
 - Issue responsiveness
 - Overall maintenance status
 
-Results are displayed with health indicators (🟢 healthy, 🟡 concerning, 🔴 problematic) and the list is automatically sorted by plugin health.
+**Security Analysis:**
+- Known security vulnerabilities
+- Outdated and deprecated dependencies
+- Pre-1.0 version packages
+- Legacy build tools
+
+**Indicators:**
+- Health: 🟢 Up-to-date | 🟡 Needing attention | 🔴 Uncertain | 📁 Archived
+- Security: ⚠️ Security concerns | 📦 Outdated dependencies
 
 For more details, see [PLUGIN_HEALTH_CHECKER.md](PLUGIN_HEALTH_CHECKER.md).
 

@@ -19,21 +19,32 @@ That's it! The script will analyze all plugins, update PLUGINS.md, and create a 
 The health checker:
 1. **Parses PLUGINS.md** to extract all plugin repositories
 2. **Analyzes each plugin** using GitHub API and npm registry
-3. **Calculates health scores** based on:
+3. **Fetches package.json** from each repository for dependency analysis
+4. **Calculates health scores** based on:
    - Recent commit activity (45% weight)
    - Issue responsiveness (20% weight)
    - npm download statistics (15% weight)
    - GitHub stars (10% weight)
    - Has package.json (10% weight)
-4. **Updates PLUGINS.md** with health indicators and sorting
-5. **Creates a pull request** for review
+5. **Analyzes dependencies** for security and deprecation issues:
+   - Identifies known security vulnerabilities
+   - Flags outdated and deprecated packages
+   - Checks for pre-1.0 version dependencies
+6. **Updates PLUGINS.md** with health and security indicators
+7. **Creates a pull request** for review
 
 ## Health Indicators
 
-- 🟢 **Healthy**: Actively maintained, recent commits, good downloads
-- 🟡 **Concerning**: Some activity but potential issues
-- 🔴 **Problematic**: Likely abandoned or deprecated
+- 🟢 **Up-to-date**: Updated within the last 2 years
+- 🟡 **Needing attention**: Updated 2-5 years ago
+- 🔴 **Uncertain**: Updated more than 5 years ago
+- 📁 **Archived**: Repository is archived
 - ⚪ **Unknown**: Unable to determine health status
+
+## Security Indicators
+
+- ⚠️ **Security concerns**: Known vulnerabilities or security issues detected
+- 📦 **Outdated dependencies**: Uses deprecated or outdated packages
 
 ## Prerequisites
 
@@ -112,8 +123,49 @@ scoring: {
 
 ## Output Files
 
-- **PLUGINS.md** - Updated with health indicators and reorganized
-- **plugin-health-report.json** - Detailed analysis data (git-ignored)
+- **PLUGINS.md** - Updated with health indicators, security badges, and reorganized
+- **plugin-health-report.json** - Detailed analysis data including security information (git-ignored)
+
+## Security Analysis Features
+
+The health checker now includes comprehensive security analysis:
+
+### What It Checks
+
+1. **Known Security Vulnerabilities**
+   - Flags packages with known security issues (e.g., node-sass, request, har-validator)
+   - Identifies deprecated packages that may have security implications
+
+2. **Outdated Dependencies**
+   - Pre-1.0 version dependencies (often unstable)
+   - Deprecated build tools (Gulp, Grunt, Bower)
+   - Legacy packages (jQuery, CoffeeScript)
+   - Outdated Metalsmith versions
+
+3. **Security Indicators in PLUGINS.md**
+   - ⚠️ appears next to plugins with security concerns
+   - 📦 appears next to plugins with outdated/deprecated dependencies
+   - Both badges can appear if both issues are present
+
+### Security Report
+
+The `plugin-health-report.json` includes detailed security information:
+```json
+{
+  "security": {
+    "totalDependencies": 15,
+    "outdatedPatterns": ["gulp: ^3.9.1 (consider modern build tools)"],
+    "deprecatedPackages": ["bower: Uses Bower (deprecated, use npm)"],
+    "securityConcerns": ["node-sass: Known security issues or deprecated"]
+  }
+}
+```
+
+### Interpreting Security Results
+
+- **⚠️ Security concerns**: Immediate attention recommended - known vulnerabilities
+- **📦 Outdated dependencies**: Consider updating - may affect stability/compatibility
+- No badges: Dependencies appear to be up-to-date and secure
 
 ## Monthly Maintenance Routine
 
