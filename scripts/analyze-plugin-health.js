@@ -152,9 +152,10 @@ class PluginHealthAnalyzer {
         inNewPluginsSection = false;
       }
       
-      // Match plugin entries: - [plugin-name](github-url)
-      const match = line.match(/^-\s+\[([^\]]+)\]\(([^)]+)\)/);
-      if (match) {
+      // Match any line that contains [name](github-url) pattern
+      // This will match regardless of status indicators or other text
+      const match = line.match(/\[([^\]]+)\]\((https:\/\/github\.com\/[^)]+)\)/);
+      if (match && line.startsWith('-')) {  // Must be a list item
         const [, name, url] = match;
         
         // Extract GitHub owner and repo from URL
