@@ -43,7 +43,7 @@ The health checker:
 
 ## Security Indicators
 
-- ⚠️ **Security concerns**: Known vulnerabilities or security issues detected
+- ⚠️ **Security concerns**: Indicates packages with confirmed CVEs or security advisories (e.g., node-sass, request, har-validator, cryptiles)
 - 📦 **Outdated dependencies**: Uses deprecated or outdated packages
 
 ## Prerequisites
@@ -133,8 +133,8 @@ The health checker now includes comprehensive security analysis:
 ### What It Checks
 
 1. **Known Security Vulnerabilities**
-   - Flags packages with known security issues (e.g., node-sass, request, har-validator)
-   - Identifies deprecated packages that may have security implications
+   - Flags packages with confirmed CVEs or security advisories (e.g., node-sass, request, har-validator, cryptiles)
+   - These are packages that have documented security issues or have been deprecated due to security concerns
 
 2. **Outdated Dependencies**
    - Pre-1.0 version dependencies (often unstable)
@@ -163,9 +163,9 @@ The `plugin-health-report.json` includes detailed security information:
 
 ### Interpreting Security Results
 
-- **⚠️ Security concerns**: Immediate attention recommended - known vulnerabilities
-- **📦 Outdated dependencies**: Consider updating - may affect stability/compatibility
-- No badges: Dependencies appear to be up-to-date and secure
+- **⚠️ Security concerns**: Immediate attention recommended - contains packages with documented CVEs or security advisories
+- **📦 Outdated dependencies**: Consider updating - may affect stability/compatibility  
+- **No badges**: Dependencies appear to be up-to-date and secure
 
 ## Monthly Maintenance Routine
 
