@@ -534,7 +534,8 @@ class PluginHealthAnalyzer {
       markdown += '\n---\n\n';
     }
     
-    markdown += '## Community Plugins\n\n';\n    markdown += '### Health Indicators\n\n';
+    markdown += '## Community Plugins\n\n';
+    markdown += '### Health Indicators\n\n';
     markdown += '- 🟢 **Up-to-date**: Updated within the last 2 years\n';
     markdown += '- 🟡 **Needing attention**: Updated 2-5 years ago\n';
     markdown += '- 🔴 **Uncertain**: Updated more than 5 years ago\n';
