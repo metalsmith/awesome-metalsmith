@@ -1,0 +1,17 @@
+## Plugin Health Analysis Results
+
+This automated analysis updates the health indicators for all plugins in PLUGINS.md.
+
+### Health Indicators
+- 🟢 **Healthy**: Actively maintained with recent commits and good adoption
+- 🟡 **Concerning**: Some maintenance activity but may have issues  
+- 🔴 **Problematic**: Likely abandoned or deprecated
+- ⚪ **Unknown**: Unable to determine health status
+
+### Analysis Based On
+- Recent commit activity (last 12 months)
+- Issue response patterns
+- npm download statistics
+- Overall maintenance status
+
+Generated on 2025-08-09

@@ -107,9 +107,32 @@ _Inspired by the endless "awesome-\*" lists out there._
 
 ## Community Plugins
 
-- [Inofficial list of plugin links](PLUGINS.md)
+- [Inofficial list of plugin links](PLUGINS.md) - Automatically updated with health indicators
 - [Plugins featured on Metalsmith.io](https://metalsmith.io/plugins/) _If you want to add yours, [submit a pull request](https://metalsmith.io/plugins/#submit-your-plugin)!_
 - [GitHub query for "metalsmith](https://github.com/search?utf8=%E2%9C%93&q=metalsmith-&type=Repositories&ref=searchresults)
+
+### 🔧 Maintainers: Plugin Health Check
+
+To help keep the plugin list current and accurate, this repository includes a health checker script that can be run locally. Any maintainer can run it:
+
+1. **Fork this repository**
+2. **Install dependencies**: `npm install`
+3. **Authenticate with GitHub CLI**: `gh auth login`
+4. **Run the health check**: `npm run update`
+5. **Review and submit the PR**
+
+**Cross-platform support:** Works on Windows, macOS, and Linux.
+
+The script analyzes all plugins for:
+
+- Recent commit activity
+- npm download statistics
+- Issue responsiveness
+- Overall maintenance status
+
+Results are displayed with health indicators (🟢 healthy, 🟡 concerning, 🔴 problematic) and the list is automatically sorted by plugin health.
+
+For more details, see [PLUGIN_HEALTH_CHECKER.md](PLUGIN_HEALTH_CHECKER.md).
 
 ## Generator
 
