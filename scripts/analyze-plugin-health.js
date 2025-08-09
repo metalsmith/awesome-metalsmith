@@ -195,6 +195,7 @@ class PluginHealthAnalyzer {
       repo: plugin.repo,
       scores: {},
       metrics: {},
+      security: {},
       healthScore: 0,
       healthIndicator: '⚪',
       lastAnalyzed: new Date().toISOString()
@@ -217,11 +218,17 @@ class PluginHealthAnalyzer {
         
         // Check if archived
         if (repoData.archived) {
-          health.healthIndicator = '🔴';
+          health.healthIndicator = '📁';
           health.healthScore = 0;
           health.metrics.status = 'archived';
           this.healthData.set(plugin.name, health);
           return;
+        }
+        
+        // Analyze dependencies if package.json exists
+        if (repoData.packageJson) {
+          const depAnalysis = await this.analyzeDependencies(repoData.packageJson);
+          health.security = depAnalysis;
         }
       }
 
@@ -279,14 +286,21 @@ class PluginHealthAnalyzer {
         console.log(`  ⚠️  Could not fetch commits for ${plugin.name}`);
       }
       
-      // Check for package.json
+      // Fetch and analyze package.json
       let hasPackageJson = false;
+      let packageJsonData = null;
       try {
         const packageUrl = `${CONFIG.github.baseUrl}/repos/${plugin.owner}/${plugin.repo}/contents/package.json`;
-        await axios.head(packageUrl, { headers: CONFIG.github.headers });
-        hasPackageJson = true;
+        const packageResponse = await axios.get(packageUrl, { headers: CONFIG.github.headers });
+        
+        if (packageResponse.data && packageResponse.data.content) {
+          hasPackageJson = true;
+          // Decode base64 content
+          const packageContent = Buffer.from(packageResponse.data.content, 'base64').toString('utf-8');
+          packageJsonData = JSON.parse(packageContent);
+        }
       } catch (error) {
-        // Package.json doesn't exist
+        // Package.json doesn't exist or couldn't be parsed
       }
       
       return {
@@ -294,7 +308,8 @@ class PluginHealthAnalyzer {
         stars: repoData.stargazers_count,
         openIssues: repoData.open_issues_count,
         archived: repoData.archived,
-        hasPackageJson
+        hasPackageJson,
+        packageJson: packageJsonData
       };
       
     } catch (error) {
@@ -416,6 +431,64 @@ class PluginHealthAnalyzer {
     if (stars >= 5) return 25;
     
     return 10;
+  }
+
+  async analyzeDependencies(packageJson) {
+    const analysis = {
+      totalDependencies: 0,
+      outdatedPatterns: [],
+      deprecatedPackages: [],
+      securityConcerns: [],
+      lastAnalyzed: new Date().toISOString()
+    };
+
+    if (!packageJson) return analysis;
+
+    const allDeps = {
+      ...packageJson.dependencies || {},
+      ...packageJson.devDependencies || {}
+    };
+
+    analysis.totalDependencies = Object.keys(allDeps).length;
+
+    // Check for outdated patterns
+    const outdatedPatterns = [
+      { pattern: /gulp(?!-)/i, message: 'Uses Gulp (consider modern build tools)' },
+      { pattern: /grunt/i, message: 'Uses Grunt (consider modern build tools)' },
+      { pattern: /bower/i, message: 'Uses Bower (deprecated, use npm)' },
+      { pattern: /jquery/i, message: 'Uses jQuery (may not be needed)' },
+      { pattern: /coffeescript/i, message: 'Uses CoffeeScript (consider TypeScript/modern JS)' }
+    ];
+
+    for (const [dep, version] of Object.entries(allDeps)) {
+      // Check for old version patterns
+      if (version.match(/^[\^~]?0\./)) {
+        analysis.outdatedPatterns.push(`${dep}: ${version} (pre-1.0 version)`);
+      }
+
+      // Check for deprecated packages
+      for (const { pattern, message } of outdatedPatterns) {
+        if (pattern.test(dep)) {
+          analysis.deprecatedPackages.push(`${dep}: ${message}`);
+        }
+      }
+
+      // Check for known security issues (simplified check)
+      const securityRisks = ['node-sass', 'request', 'har-validator', 'cryptiles'];
+      if (securityRisks.includes(dep)) {
+        analysis.securityConcerns.push(`${dep}: Known security issues or deprecated`);
+      }
+    }
+
+    // Check metalsmith version if present
+    if (allDeps.metalsmith) {
+      const version = allDeps.metalsmith;
+      if (version.match(/^[\^~]?[01]\./)) {
+        analysis.outdatedPatterns.push(`metalsmith: ${version} (outdated, current is 2.x)`);
+      }
+    }
+
+    return analysis;
   }
 
   calculateOverallScore(scores) {
@@ -542,6 +615,9 @@ class PluginHealthAnalyzer {
     markdown += '- 🔴 **Uncertain**: Updated more than 5 years ago\n';
     markdown += '- 📁 **Archived**: Repository is archived\n';
     markdown += '- ⚪ **Unknown**: Unable to determine status\n\n';
+    markdown += '### Security Indicators\n\n';
+    markdown += '- ⚠️ **Security concerns**: Known vulnerabilities or security issues\n';
+    markdown += '- 📦 **Outdated dependencies**: Uses deprecated or outdated packages\n\n';
     markdown += `*Last updated: ${new Date().toISOString().split('T')[0]}*\n\n`;
     markdown += '---\n\n';
     
@@ -550,6 +626,18 @@ class PluginHealthAnalyzer {
       markdown += '## 🟢 Up-to-date Plugins\n\n';
       for (const plugin of upToDate) {
         markdown += `- ${plugin.displayName}`;
+        
+        // Add security badges
+        if (plugin.health.security) {
+          const sec = plugin.health.security;
+          if (sec.securityConcerns && sec.securityConcerns.length > 0) {
+            markdown += ` ⚠️`;
+          }
+          if (sec.deprecatedPackages && sec.deprecatedPackages.length > 0) {
+            markdown += ` 📦`;
+          }
+        }
+        
         if (plugin.health.metrics.weeklyDownloads) {
           markdown += ` - ${plugin.health.metrics.weeklyDownloads.toLocaleString()} weekly downloads`;
         }
@@ -566,6 +654,18 @@ class PluginHealthAnalyzer {
       markdown += '## 🟡 Plugins Needing Attention (2-5 years)\n\n';
       for (const plugin of needingAttention) {
         markdown += `- ${plugin.displayName}`;
+        
+        // Add security badges
+        if (plugin.health.security) {
+          const sec = plugin.health.security;
+          if (sec.securityConcerns && sec.securityConcerns.length > 0) {
+            markdown += ` ⚠️`;
+          }
+          if (sec.deprecatedPackages && sec.deprecatedPackages.length > 0) {
+            markdown += ` 📦`;
+          }
+        }
+        
         if (plugin.health.metrics.lastCommit) {
           const timeAgo = formatDistanceToNow(new Date(plugin.health.metrics.lastCommit), { addSuffix: true });
           markdown += ` - Last updated ${timeAgo}`;
@@ -579,6 +679,18 @@ class PluginHealthAnalyzer {
       markdown += '## 🔴 Uncertain Status (>5 years)\n\n';
       for (const plugin of uncertain) {
         markdown += `- ${plugin.displayName}`;
+        
+        // Add security badges
+        if (plugin.health.security) {
+          const sec = plugin.health.security;
+          if (sec.securityConcerns && sec.securityConcerns.length > 0) {
+            markdown += ` ⚠️`;
+          }
+          if (sec.deprecatedPackages && sec.deprecatedPackages.length > 0) {
+            markdown += ` 📦`;
+          }
+        }
+        
         if (plugin.health.metrics.lastCommit) {
           const timeAgo = formatDistanceToNow(new Date(plugin.health.metrics.lastCommit), { addSuffix: true });
           markdown += ` - Last updated ${timeAgo}`;
@@ -592,6 +704,18 @@ class PluginHealthAnalyzer {
       markdown += '## 📁 Archived Plugins\n\n';
       for (const plugin of archived) {
         markdown += `- ${plugin.displayName}`;
+        
+        // Add security badges
+        if (plugin.health.security) {
+          const sec = plugin.health.security;
+          if (sec.securityConcerns && sec.securityConcerns.length > 0) {
+            markdown += ` ⚠️`;
+          }
+          if (sec.deprecatedPackages && sec.deprecatedPackages.length > 0) {
+            markdown += ` 📦`;
+          }
+        }
+        
         if (plugin.health.metrics.lastCommit) {
           const timeAgo = formatDistanceToNow(new Date(plugin.health.metrics.lastCommit), { addSuffix: true });
           markdown += ` - Last updated ${timeAgo}`;
@@ -624,6 +748,28 @@ class PluginHealthAnalyzer {
       markdown += `- Unknown: ${unknown.length} (${Math.round(unknown.length / communityPlugins * 100)}%)\n`;
     }
     
+    // Add security summary
+    markdown += '\n### Security Analysis\n';
+    let securityConcernsCount = 0;
+    let deprecatedDepsCount = 0;
+    let analyzedCount = 0;
+    
+    for (const health of this.healthData.values()) {
+      if (health.security && health.security.totalDependencies) {
+        analyzedCount++;
+        if (health.security.securityConcerns && health.security.securityConcerns.length > 0) {
+          securityConcernsCount++;
+        }
+        if (health.security.deprecatedPackages && health.security.deprecatedPackages.length > 0) {
+          deprecatedDepsCount++;
+        }
+      }
+    }
+    
+    markdown += `- Plugins analyzed for dependencies: ${analyzedCount}\n`;
+    markdown += `- Plugins with security concerns: ${securityConcernsCount}\n`;
+    markdown += `- Plugins with outdated dependencies: ${deprecatedDepsCount}\n`;
+    
     // Write updated file
     await fs.writeFile('PLUGINS.md', markdown);
     
@@ -636,7 +782,12 @@ class PluginHealthAnalyzer {
         needingAttention: needingAttention.length,
         uncertain: uncertain.length,
         archived: archived.length,
-        unknown: unknown.length
+        unknown: unknown.length,
+        securityAnalysis: {
+          analyzed: analyzedCount,
+          withSecurityConcerns: securityConcernsCount,
+          withOutdatedDeps: deprecatedDepsCount
+        }
       },
       plugins: Array.from(this.healthData.values())
     };
