@@ -1,6 +1,6 @@
 ## Plugin Health Analysis Results
 
-This automated analysis updates the health indicators for all plugins in the configured PLUGINS.md file.
+This automated analysis updates the health indicators for all plugins in docs/PLUGINS.md.
 
 ### Health Indicators
 - 🟢 **Healthy**: Actively maintained with recent commits and good adoption
@@ -14,4 +14,4 @@ This automated analysis updates the health indicators for all plugins in the con
 - npm download statistics
 - Overall maintenance status
 
-Generated on 2025-08-09
+Generated on 2025-08-10
