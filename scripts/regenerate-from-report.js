@@ -107,12 +107,15 @@ if (corePlugins.length > 0) {
   markdown += '\n---\n\n';
 }
 
-markdown += '## Health Indicators\n\n';
+markdown += '## Community Plugins\n\n';
+markdown += '### Health Indicators\n\n';
 markdown += '- 🟢 **Up-to-date**: Updated within the last 2 years\n';
 markdown += '- 🟡 **Needing attention**: Updated 2-5 years ago\n';
 markdown += '- 🔴 **Uncertain**: Updated more than 5 years ago\n';
-markdown += '- 📁 **Archived**: Repository is archived\n';
-markdown += '- ⚪ **Unknown**: Unable to determine status\n\n';
+markdown += '- 📁 **Archived**: Repository is archived\n\n';
+markdown += '### Security Indicators\n\n';
+markdown += '- ⚠️ **Security concerns**: Known vulnerabilities or security issues\n';
+markdown += '- 📦 **Outdated dependencies**: Uses deprecated or outdated packages\n\n';
 markdown += `*Last updated: ${new Date().toISOString().split('T')[0]}*\n\n`;
 markdown += '---\n\n';
 
@@ -172,23 +175,26 @@ if (archived.length > 0) {
   markdown += '\n';
 }
 
-if (unknown.length > 0) {
-  markdown += '## ⚪ Unknown Status\n\n';
-  for (const plugin of unknown) {
-    markdown += `- [${plugin.name}](${plugin.url})\n`;
-  }
-  markdown += '\n';
-}
+// Unknown plugins (404 repos) are not listed in the output
 
-// Add statistics
+// Add statistics (excluding unknown/404 plugins from percentages)
 const totalPlugins = report.totalPlugins;
+const validCommunityPlugins = totalPlugins - corePlugins.length - unknown.length;
 markdown += '## Statistics\n\n';
 markdown += `- Total plugins: ${totalPlugins}\n`;
-markdown += `- Up-to-date: ${upToDate.length} (${Math.round(upToDate.length / totalPlugins * 100)}%)\n`;
-markdown += `- Needing attention: ${needingAttention.length} (${Math.round(needingAttention.length / totalPlugins * 100)}%)\n`;
-markdown += `- Uncertain: ${uncertain.length} (${Math.round(uncertain.length / totalPlugins * 100)}%)\n`;
-markdown += `- Archived: ${archived.length} (${Math.round(archived.length / totalPlugins * 100)}%)\n`;
-markdown += `- Unknown: ${unknown.length} (${Math.round(unknown.length / totalPlugins * 100)}%)\n`;
+markdown += `- Core plugins: ${corePlugins.length}\n`;
+markdown += `- Community plugins: ${validCommunityPlugins}\n`;
+if (unknown.length > 0) {
+  markdown += `- Repositories for ${unknown.length} plugins do not exist, resulting in 404s\n`;
+}
+markdown += '\n';
+markdown += '### Community Plugin Health\n';
+if (validCommunityPlugins > 0) {
+  markdown += `- Up-to-date: ${upToDate.length} (${Math.round(upToDate.length / validCommunityPlugins * 100)}%)\n`;
+  markdown += `- Needing attention: ${needingAttention.length} (${Math.round(needingAttention.length / validCommunityPlugins * 100)}%)\n`;
+  markdown += `- Uncertain: ${uncertain.length} (${Math.round(uncertain.length / validCommunityPlugins * 100)}%)\n`;
+  markdown += `- Archived: ${archived.length} (${Math.round(archived.length / validCommunityPlugins * 100)}%)\n`;
+}
 
 // Write updated file
 fs.writeFileSync(config.paths.pluginsMarkdown, markdown);

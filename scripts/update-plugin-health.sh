@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script to run plugin health check locally and create a PR
+# Script to run plugin health check and commit changes
 # Usage: ./scripts/update-plugin-health.sh
 
 set -e
@@ -12,23 +12,6 @@ HEALTH_REPORT=$(node -e "console.log(require('$CONFIG_FILE').paths.healthReport)
 
 echo "🚀 Starting plugin health update process..."
 
-# Check if gh CLI is authenticated
-if ! gh auth status >/dev/null 2>&1; then
-    echo "❌ Error: GitHub CLI not authenticated"
-    echo "Run: gh auth login"
-    exit 1
-fi
-
-# Ensure we're on main/master branch and up to date
-echo "📥 Updating main branch..."
-git checkout master || git checkout main
-git pull origin master || git pull origin main
-
-# Create a new branch with timestamp
-BRANCH_NAME="update-plugin-health-$(date +%Y%m%d)"
-echo "🌿 Creating branch: $BRANCH_NAME"
-git checkout -b "$BRANCH_NAME"
-
 # Run the health check
 echo "🔍 Analyzing plugin health..."
 npm run health-check
@@ -36,8 +19,7 @@ npm run health-check
 # Check if there are changes
 if git diff --quiet HEAD -- "$PLUGINS_MD"; then
     echo "ℹ️  No changes detected in $PLUGINS_MD"
-    git checkout master || git checkout main
-    git branch -D "$BRANCH_NAME"
+    echo "✅ Health check complete - no updates needed"
     exit 0
 fi
 
@@ -49,10 +31,15 @@ if [ -f "$HEALTH_REPORT" ]; then
         const report = require('./$HEALTH_REPORT');
         const stats = report.statistics;
         console.log('  Total plugins:', report.totalPlugins);
-        console.log('  🟢 Healthy:', stats.healthy);
-        console.log('  🟡 Concerning:', stats.concerning);
-        console.log('  🔴 Problematic:', stats.problematic);
-        console.log('  ⚪ Unknown:', stats.unknown);
+        if (stats.upToDate !== undefined) {
+            console.log('  🟢 Up-to-date:', stats.upToDate);
+            console.log('  🟡 Needing attention:', stats.needingAttention);
+            console.log('  🔴 Uncertain:', stats.uncertain);
+            console.log('  📁 Archived:', stats.archived);
+            if (stats.unknown > 0) {
+                console.log('  ⚠️  404 repositories:', stats.unknown, '(not listed)');
+            }
+        }
     "
     echo ""
 fi
@@ -60,40 +47,24 @@ fi
 # Commit changes
 echo "💾 Committing changes..."
 git add "$PLUGINS_MD"
+if [ -f "$HEALTH_REPORT" ]; then
+    git add "$HEALTH_REPORT"
+fi
+
 git commit -m "chore: update plugin health indicators
 
-Monthly automated health check for all Metalsmith plugins.
+Automated health check for all Metalsmith plugins.
 Updated $(date +%Y-%m-%d)"
 
-# Push to remote
-echo "📤 Pushing to GitHub..."
-git push origin "$BRANCH_NAME"
-
-# Create pull request
-echo "🔄 Creating pull request..."
-PR_BODY="## Plugin Health Analysis Results
-
-This automated analysis updates the health indicators for all plugins in $PLUGINS_MD.
-
-### Health Indicators
-- 🟢 **Healthy**: Actively maintained with recent commits and good adoption
-- 🟡 **Concerning**: Some maintenance activity but may have issues  
-- 🔴 **Problematic**: Likely abandoned or deprecated
-- ⚪ **Unknown**: Unable to determine health status
-
-### Analysis Based On
-- Recent commit activity (last 12 months)
-- Issue response patterns
-- npm download statistics
-- Overall maintenance status
-
-Generated on $(date +%Y-%m-%d)"
-
-gh pr create \
-    --title "Update Plugin Health Indicators ($(date +%Y-%m-%d))" \
-    --body "$PR_BODY" \
-    --base master
+# Push to remote origin
+echo "📤 Pushing changes to origin..."
+git push origin
 
 echo ""
-echo "✅ Success! Pull request created."
-echo "   Review and merge at: https://github.com/metalsmith/awesome-metalsmith/pulls"
+echo "✅ Success! Plugin health data updated and pushed to origin."
+echo "   Changes committed to current branch: $(git branch --show-current)"
+echo ""
+echo "📋 Next steps:"
+echo "   1. Review the changes in your local repository"
+echo "   2. Create a pull request manually if needed"
+echo "   3. Merge with upstream when ready"

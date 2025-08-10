@@ -1,17 +1,23 @@
 ## Plugin Health Analysis Results
 
-This automated analysis updates the health indicators for all plugins in docs/PLUGINS.md.
+This automated analysis updates the health indicators for all plugins in the configured PLUGINS.md file.
 
 ### Health Indicators
-- 🟢 **Healthy**: Actively maintained with recent commits and good adoption
-- 🟡 **Concerning**: Some maintenance activity but may have issues  
-- 🔴 **Problematic**: Likely abandoned or deprecated
-- ⚪ **Unknown**: Unable to determine health status
+- 🟢 **Up-to-date**: Updated within the last 2 years
+- 🟡 **Needing attention**: Updated 2-5 years ago  
+- 🔴 **Uncertain**: Updated more than 5 years ago
+- 📁 **Archived**: Repository is archived
+- ⚪ **Unknown**: Unable to determine status
+
+### Security Indicators
+- ⚠️ **Security concerns**: Known vulnerabilities or security issues
+- 📦 **Outdated dependencies**: Uses deprecated or outdated packages
 
 ### Analysis Based On
-- Recent commit activity (last 12 months)
+- Recent commit activity
 - Issue response patterns
 - npm download statistics
-- Overall maintenance status
+- Dependency analysis
+- Security vulnerability scanning
 
-Generated on 2025-08-10
+This health check provides visibility into the current state of the Metalsmith plugin ecosystem.
