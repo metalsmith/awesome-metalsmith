@@ -3,17 +3,18 @@
 // Regenerate PLUGINS.md from existing health report using new categorization
 const fs = require('fs');
 const { formatDistanceToNow, differenceInDays } = require('date-fns');
+const config = require('./config.json');
 
-console.log('📝 Regenerating PLUGINS.md from existing health report...\n');
+console.log(`📝 Regenerating ${config.paths.pluginsMarkdown} from existing health report...\n`);
 
 // Check if health report exists
-if (!fs.existsSync('plugin-health-report.json')) {
-  console.error('❌ No plugin-health-report.json found. Run health check first.');
+if (!fs.existsSync(config.paths.healthReport)) {
+  console.error(`❌ No ${config.paths.healthReport} found. Run health check first.`);
   process.exit(1);
 }
 
 // Load the existing health report
-const report = JSON.parse(fs.readFileSync('plugin-health-report.json', 'utf8'));
+const report = JSON.parse(fs.readFileSync(config.paths.healthReport, 'utf8'));
 
 // Function to get health indicator based on new categories
 function getHealthIndicator(lastCommitDate, isArchived) {
@@ -190,9 +191,9 @@ markdown += `- Archived: ${archived.length} (${Math.round(archived.length / tota
 markdown += `- Unknown: ${unknown.length} (${Math.round(unknown.length / totalPlugins * 100)}%)\n`;
 
 // Write updated file
-fs.writeFileSync('PLUGINS.md', markdown);
+fs.writeFileSync(config.paths.pluginsMarkdown, markdown);
 
-console.log('✅ PLUGINS.md regenerated with new categorization');
+console.log(`✅ ${config.paths.pluginsMarkdown} regenerated with new categorization`);
 console.log('\n📊 New Statistics:');
 console.log(`  Total plugins: ${totalPlugins}`);
 console.log(`  🟢 Up-to-date: ${upToDate.length}`);

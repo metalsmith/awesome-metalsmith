@@ -2,6 +2,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const axios = require('axios');
 const { formatDistanceToNow, differenceInDays } = require('date-fns');
+const config = require('./config.json');
 
 // Load environment variables from .env file if it exists
 try {
@@ -136,7 +137,7 @@ class PluginHealthAnalyzer {
   }
 
   async parsePluginsMarkdown() {
-    const content = await fs.readFile('PLUGINS.md', 'utf-8');
+    const content = await fs.readFile(config.paths.pluginsMarkdown, 'utf-8');
     const lines = content.split('\n');
     let inNewPluginsSection = false;
     
@@ -519,7 +520,7 @@ class PluginHealthAnalyzer {
   }
 
   async generateUpdatedMarkdown() {
-    console.log('\n📝 Generating updated PLUGINS.md...');
+    console.log(`\n📝 Generating updated ${config.paths.pluginsMarkdown}...`);
     
     // Core plugins (maintained by Metalsmith org)
     const corePlugins = [];
@@ -771,7 +772,7 @@ class PluginHealthAnalyzer {
     markdown += `- Plugins with outdated dependencies: ${deprecatedDepsCount}\n`;
     
     // Write updated file
-    await fs.writeFile('PLUGINS.md', markdown);
+    await fs.writeFile(config.paths.pluginsMarkdown, markdown);
     
     // Also save detailed health data as JSON for debugging
     const healthReport = {
@@ -793,12 +794,12 @@ class PluginHealthAnalyzer {
     };
     
     await fs.writeFile(
-      'plugin-health-report.json',
+      config.paths.healthReport,
       JSON.stringify(healthReport, null, 2)
     );
     
-    console.log('✅ PLUGINS.md updated successfully');
-    console.log(`📊 Detailed report saved to plugin-health-report.json`);
+    console.log(`✅ ${config.paths.pluginsMarkdown} updated successfully`);
+    console.log(`📊 Detailed report saved to ${config.paths.healthReport}`);
   }
 
   updateRateLimits(headers) {

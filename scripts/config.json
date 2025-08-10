@@ -1,0 +1,21 @@
+{
+  "paths": {
+    "pluginsMarkdown": "docs/PLUGINS.md",
+    "pluginsMarkdown2": "docs/PLUGINS2.md",
+    "resourcesMarkdown": "docs/RESOURCES.md",
+    "pluginHealthChecker": "docs/PLUGIN_HEALTH_CHECKER.md",
+    "newPluginGuide": "docs/NEW_PLUGIN_GUIDE.md",
+    "healthReport": "plugin-health-report.json",
+    "tutorialsDir": "docs/tutorials"
+  },
+  "github": {
+    "organization": "metalsmith",
+    "repository": "awesome-metalsmith"
+  },
+  "healthCheck": {
+    "daysForRecent": 730,
+    "daysForAttention": 1825,
+    "requestsPerMinute": 30,
+    "delayMs": 2000
+  }
+}

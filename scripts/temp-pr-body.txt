@@ -1,6 +1,6 @@
 ## Plugin Health Analysis Results
 
-This automated analysis updates the health indicators for all plugins in PLUGINS.md.
+This automated analysis updates the health indicators for all plugins in the configured PLUGINS.md file.
 
 ### Health Indicators
 - 🟢 **Healthy**: Actively maintained with recent commits and good adoption

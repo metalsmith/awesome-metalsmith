@@ -3,6 +3,7 @@
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const config = require('./config.json');
 
 // Cross-platform script to run plugin health check and create PR
 // Works on Windows, macOS, and Linux
@@ -62,19 +63,19 @@ runCommand('npm run health-check');
 
 // Check if there are changes
 const gitStatus = runCommand('git status --porcelain', { silent: true });
-const hasChanges = gitStatus.includes('PLUGINS.md');
+const hasChanges = gitStatus.includes(path.basename(config.paths.pluginsMarkdown));
 
 if (!hasChanges) {
-  console.log('ℹ️  No changes detected in PLUGINS.md');
+  console.log(`ℹ️  No changes detected in ${config.paths.pluginsMarkdown}`);
   runCommand(`git checkout ${mainBranch}`);
   runCommand(`git branch -D "${branchName}"`);
   process.exit(0);
 }
 
 // Show statistics from the report
-if (fs.existsSync('plugin-health-report.json')) {
+if (fs.existsSync(config.paths.healthReport)) {
   try {
-    const report = JSON.parse(fs.readFileSync('plugin-health-report.json', 'utf8'));
+    const report = JSON.parse(fs.readFileSync(config.paths.healthReport, 'utf8'));
     const stats = report.statistics;
     console.log('\n📊 Health Statistics:');
     console.log(`  Total plugins: ${report.totalPlugins}`);
@@ -90,7 +91,7 @@ if (fs.existsSync('plugin-health-report.json')) {
 // Commit changes
 const date = new Date().toISOString().split('T')[0];
 console.log('💾 Committing changes...');
-runCommand('git add PLUGINS.md');
+runCommand(`git add ${config.paths.pluginsMarkdown}`);
 runCommand(`git commit -m "chore: update plugin health indicators
 
 Monthly automated health check for all Metalsmith plugins.
@@ -104,7 +105,7 @@ runCommand(`git push origin "${branchName}"`);
 console.log('🔄 Creating pull request...');
 const prBody = `## Plugin Health Analysis Results
 
-This automated analysis updates the health indicators for all plugins in PLUGINS.md.
+This automated analysis updates the health indicators for all plugins in ${config.paths.pluginsMarkdown}.
 
 ### Health Indicators
 - 🟢 **Healthy**: Actively maintained with recent commits and good adoption

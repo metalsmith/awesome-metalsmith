@@ -5,6 +5,11 @@
 
 set -e
 
+# Read config
+CONFIG_FILE="$(dirname "$0")/config.json"
+PLUGINS_MD=$(node -e "console.log(require('$CONFIG_FILE').paths.pluginsMarkdown)")
+HEALTH_REPORT=$(node -e "console.log(require('$CONFIG_FILE').paths.healthReport)")
+
 echo "🚀 Starting plugin health update process..."
 
 # Check if gh CLI is authenticated
@@ -29,19 +34,19 @@ echo "🔍 Analyzing plugin health..."
 npm run health-check
 
 # Check if there are changes
-if git diff --quiet HEAD -- PLUGINS.md; then
-    echo "ℹ️  No changes detected in PLUGINS.md"
+if git diff --quiet HEAD -- "$PLUGINS_MD"; then
+    echo "ℹ️  No changes detected in $PLUGINS_MD"
     git checkout master || git checkout main
     git branch -D "$BRANCH_NAME"
     exit 0
 fi
 
 # Show statistics from the report
-if [ -f "plugin-health-report.json" ]; then
+if [ -f "$HEALTH_REPORT" ]; then
     echo ""
     echo "📊 Health Statistics:"
     node -e "
-        const report = require('./plugin-health-report.json');
+        const report = require('./$HEALTH_REPORT');
         const stats = report.statistics;
         console.log('  Total plugins:', report.totalPlugins);
         console.log('  🟢 Healthy:', stats.healthy);
@@ -54,7 +59,7 @@ fi
 
 # Commit changes
 echo "💾 Committing changes..."
-git add PLUGINS.md
+git add "$PLUGINS_MD"
 git commit -m "chore: update plugin health indicators
 
 Monthly automated health check for all Metalsmith plugins.
@@ -68,7 +73,7 @@ git push origin "$BRANCH_NAME"
 echo "🔄 Creating pull request..."
 PR_BODY="## Plugin Health Analysis Results
 
-This automated analysis updates the health indicators for all plugins in PLUGINS.md.
+This automated analysis updates the health indicators for all plugins in $PLUGINS_MD.
 
 ### Health Indicators
 - 🟢 **Healthy**: Actively maintained with recent commits and good adoption
