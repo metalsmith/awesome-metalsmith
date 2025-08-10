@@ -1,79 +1,5 @@
 # Metalsmith Plugins
 
-## New Plugins
-
-*Plugins to be categorized and analyzed*
-
-- [metalsmith-appfog](https://github.com/miloskroulik/metalsmith-appfog)
-- [metalsmith-assets](https://github.com/treygriffith/metalsmith-assets)
-- [metalsmith-atom](https://github.com/mreynolds/metalsmith-atom)
-- [metalsmith-blog](https://github.com/jsannerstedt/metalsmith-blog)
-- [metalsmith-blog-bootstrap](https://github.com/s-stude/metalsmith-blog-bootstrap)
-- [metalsmith-boilerplate](https://github.com/budparr/metalsmith-boilerplate)
-- [metalsmith-boilerplate](https://github.com/Nadeeshyama/metalsmith-boilerplate)
-- [metalsmith-boilerplates](https://github.com/superwolff/metalsmith-boilerplates)
-- [metalsmith-browserify](https://github.com/mpd106/metalsmith-browserify)
-- [metalsmith-bug](https://github.com/Blooie/metalsmith-bug)
-- [metalsmith-build-date](https://github.com/sarahhenderson/metalsmith-build-date)
-- [metalsmith-collections](https://github.com/segmentio/metalsmith-collections)
-- [metalsmith-contentful](https://github.com/jesseconnr/metalsmith-contentful)
-- [metalsmith-demo](https://github.com/bchavezgd/metalsmith-demo)
-- [metalsmith-demo](https://github.com/jaredblyth/metalsmith-demo)
-- [metalsmith-drafts](https://github.com/segmentio/metalsmith-drafts)
-- [metalsmith-env](https://github.com/kalamuna/metalsmith-env)
-- [metalsmith-example](https://github.com/JSila/metalsmith-example)
-- [metalsmith-example](https://github.com/tcoats/metalsmith-example)
-- [metalsmith-example](https://github.com/trint-it/metalsmith-example)
-- [metalsmith-excerpts](https://github.com/segmentio/metalsmith-excerpts)
-- [metalsmith-fingerprint-ignore](https://github.com/superwolff/metalsmith-fingerprint-ignore)
-- [metalsmith-glob-meta](https://github.com/ksmithut/metalsmith-glob-meta)
-- [metalsmith-greenhouse](https://github.com/zalando/metalsmith-greenhouse)
-- [metalsmith-gulp-boilerplate](https://github.com/charlespeters/metalsmith-gulp-boilerplate)
-- [metalsmith-handlebars-content](https://github.com/kwizzn/metalsmith-handlebars-content)
-- [metalsmith-hbt](https://github.com/Citytechinc/metalsmith-hbt)
-- [metalsmith-headings](https://github.com/segmentio/metalsmith-headings)
-- [metalsmith-hideshow](https://github.com/evoja/metalsmith-hideshow)
-- [metalsmith-ignore](https://github.com/segmentio/metalsmith-ignore)
-- [metalsmith-in-place](https://github.com/superwolff/metalsmith-in-place)
-- [metalsmith-kss](https://github.com/kwizzn/metalsmith-kss)
-- [metalsmith-layouts](https://github.com/superwolff/metalsmith-layouts)
-- [metalsmith-logo](https://github.com/segmentio/metalsmith-logo)
-- [metalsmith-mapsite](https://github.com/superwolff/metalsmith-mapsite)
-- [metalsmith-markdown](https://github.com/segmentio/metalsmith-markdown)
-- [metalsmith-metadata](https://github.com/segmentio/metalsmith-metadata)
-- [metalsmith-moment](https://github.com/lasar/metalsmith-moment)
-- [metalsmith-pdf](https://github.com/FakeYou/metalsmith-pdf)
-- [metalsmith-permalinks](https://github.com/segmentio/metalsmith-permalinks)
-- [metalsmith-playground](https://github.com/maxild/metalsmith-playground)
-- [metalsmith-prefixoid](https://github.com/evoja/metalsmith-prefixoid)
-- [metalsmith-prism](https://github.com/Availity/metalsmith-prism)
-- [metalsmith-prismic-gub](https://github.com/everydayhero/metalsmith-prismic-gub)
-- [metalsmith-project-template](https://github.com/fellswoop/metalsmith-project-template)
-- [metalsmith-proxy](https://github.com/ehaskins/metalsmith-proxy)
-- [metalsmith-rho](https://github.com/inca/metalsmith-rho)
-- [metalsmith-save-original-location](https://github.com/ubenzer/metalsmith-save-original-location)
-- [metalsmith-scaffold](https://github.com/dead-poet/metalsmith-scaffold)
-- [metalsmith-server-watch](https://github.com/frank06/metalsmith-server-watch)
-- [metalsmith-starter](https://github.com/JimmyMultani/metalsmith-starter)
-- [metalsmith-tags](https://github.com/hrehfeld/metalsmith-tags)
-- [metalsmith-tags](https://github.com/lasar/metalsmith-tags)
-- [metalsmith-tags](https://github.com/sarahhenderson/metalsmith-tags)
-- [metalsmith-tc-atom](https://github.com/tcurdt/metalsmith-tc-atom)
-- [metalsmith-tc-sitemap](https://github.com/tcurdt/metalsmith-tc-sitemap)
-- [metalsmith-test](https://github.com/bapti/metalsmith-test)
-- [metalsmith-test](https://github.com/biilmann/metalsmith-test)
-- [metalsmith-test](https://github.com/claycarpenter/metalsmith-test)
-- [metalsmith-title](https://github.com/OzzyCzech/metalsmith-title)
-- [metalsmith-travis-appfog-test](https://github.com/miloskroulik/metalsmith-travis-appfog-test)
-- [metalsmith-tutorial](https://github.com/bradcerasani/metalsmith-tutorial)
-- [metalsmith-typogr](https://github.com/colophonemes/metalsmith-typogr)
-- [metalsmith-typogr](https://github.com/xbonell/metalsmith-typogr)
-- [metalsmith-webpack](https://github.com/christophercliff/metalsmith-webpack)
-- [metalsmith-website](https://github.com/kaharrs2/metalsmith-website)
-- [metalsmith-xo](https://github.com/blainsmith/metalsmith-xo)
-- [metalsmith-yaml](https://github.com/astralfrontier/metalsmith-yaml)
-- [metalsmith-yaml2json](https://github.com/nicklasmoeller/metalsmith-yaml2json)
-
 ## 🏛️ Core Plugins
 
 *Official plugins maintained by the Metalsmith team.*
@@ -106,47 +32,59 @@
 - ⚠️ **Security concerns**: Known vulnerabilities or security issues
 - 📦 **Outdated dependencies**: Uses deprecated or outdated packages
 
-*Last updated: 2025-08-09*
+*Last updated: 2025-08-10*
 
 ---
 
 ## 🟢 Up-to-date Plugins
 
-- 🟢 [metalsmith-safe-links](https://github.com/wernerglinka/metalsmith-safe-links) - 175 weekly downloads - Updated 2 days ago
-- 🟢 [metalsmith-renamer](https://github.com/alex-ketch/metalsmith-renamer) - 93 weekly downloads - Updated 3 days ago
-- 🟢 [metalsmith-bundled-components](https://github.com/wernerglinka/metalsmith-bundled-components) - 78 weekly downloads - Updated 4 days ago
-- 🟢 [metalsmith-static-files](https://github.com/wernerglinka/metalsmith-static-files) - 104 weekly downloads - Updated 5 days ago
-- 🟢 [metalsmith-simple-pagination](https://github.com/wernerglinka/metalsmith-simple-pagination) - 20 weekly downloads - Updated 8 days ago
-- 🟢 [metalsmith-sectioned-blog-pagination](https://github.com/wernerglinka/metalsmith-sectioned-blog-pagination) - 18 weekly downloads - Updated 8 days ago
-- 🟢 [metalsmith-prism](https://github.com/wernerglinka/metalsmith-prism) - 41 weekly downloads - Updated 9 days ago
-- 🟢 [metalsmith-optimize-images](https://github.com/wernerglinka/metalsmith-optimize-images) - 10 weekly downloads - Updated 10 days ago
-- 🟢 [metalsmith-optimize-html](https://github.com/wernerglinka/metalsmith-optimize-html) - 26 weekly downloads - Updated 10 days ago
-- 🟢 [metalsmith-menu-plus](https://github.com/wernerglinka/metalsmith-menu-plus) - 19 weekly downloads - Updated 11 days ago
-- 🟢 [metalsmith-mdn](https://github.com/wernerglinka/metalsmith-mdn) - 5 weekly downloads - Updated 12 days ago
-- 🟢 [metalsmith-markdown-partials](https://github.com/wernerglinka/metalsmith-markdown-partials) - 23 weekly downloads - Updated 12 days ago
-- 🟢 [metalsmith-unified-markdown](https://github.com/wernerglinka/metalsmith-unified-markdown) - 13 weekly downloads - Updated 21 days ago
-- 🟢 [metalsmith-filemetadata](https://github.com/dpobel/metalsmith-filemetadata) - 50 weekly downloads - Updated about 2 months ago
-- 🟢 [metalsmith-uglify](https://github.com/ksmithut/metalsmith-uglify) - 40 weekly downloads - Updated 5 months ago
-- 🟢 [metalsmith-request](https://github.com/ahmadnassri/metalsmith-request) - 7 weekly downloads - Updated 7 months ago
+- 🟢 [metalsmith-safe-links](https://github.com/wernerglinka/metalsmith-safe-links) - 172 weekly downloads - Updated 3 days ago
+- 🟢 [metalsmith-renamer](https://github.com/alex-ketch/metalsmith-renamer) - 92 weekly downloads - Updated 4 days ago
+- 🟢 [metalsmith-bundled-components](https://github.com/wernerglinka/metalsmith-bundled-components) - 78 weekly downloads - Updated 5 days ago
+- 🟢 [metalsmith-static-files](https://github.com/wernerglinka/metalsmith-static-files) - 99 weekly downloads - Updated 6 days ago
+- 🟢 [metalsmith-simple-pagination](https://github.com/wernerglinka/metalsmith-simple-pagination) - 19 weekly downloads - Updated 9 days ago
+- 🟢 [metalsmith-sectioned-blog-pagination](https://github.com/wernerglinka/metalsmith-sectioned-blog-pagination) - 11 weekly downloads - Updated 9 days ago
+- 🟢 [metalsmith-prism](https://github.com/Availity/metalsmith-prism) - 30 weekly downloads - Updated 10 days ago
+- 🟢 [metalsmith-prism](https://github.com/wernerglinka/metalsmith-prism) - 30 weekly downloads - Updated 10 days ago
+- 🟢 [metalsmith-permalinks](https://github.com/segmentio/metalsmith-permalinks) - 902 weekly downloads - Updated 10 days ago
+- 🟢 [metalsmith-optimize-images](https://github.com/wernerglinka/metalsmith-optimize-images) - 10 weekly downloads - Updated 11 days ago
+- 🟢 [metalsmith-optimize-html](https://github.com/wernerglinka/metalsmith-optimize-html) - 20 weekly downloads - Updated 11 days ago
+- 🟢 [metalsmith-menu-plus](https://github.com/wernerglinka/metalsmith-menu-plus) - 18 weekly downloads - Updated 12 days ago
+- 🟢 [metalsmith-mdn](https://github.com/wernerglinka/metalsmith-mdn) - 5 weekly downloads - Updated 13 days ago
+- 🟢 [metalsmith-markdown-partials](https://github.com/wernerglinka/metalsmith-markdown-partials) - 23 weekly downloads - Updated 13 days ago
+- 🟢 [metalsmith-unified-markdown](https://github.com/wernerglinka/metalsmith-unified-markdown) - 12 weekly downloads - Updated 22 days ago
+- 🟢 [metalsmith-filemetadata](https://github.com/dpobel/metalsmith-filemetadata) - 49 weekly downloads - Updated about 2 months ago
+- 🟢 [metalsmith-uglify](https://github.com/ksmithut/metalsmith-uglify) - 38 weekly downloads - Updated 5 months ago
+- 🟢 [metalsmith-layouts](https://github.com/superwolff/metalsmith-layouts) - 2,005 weekly downloads - Updated 5 months ago
+- 🟢 [metalsmith-request](https://github.com/ahmadnassri/metalsmith-request) - Updated 7 months ago
 - 🟢 [metalsmith-jade](https://github.com/ahmadnassri/metalsmith-jade) - 18 weekly downloads - Updated 7 months ago
-- 🟢 [metalsmith-paths](https://github.com/ahmadnassri/metalsmith-paths) - 28 weekly downloads - Updated 7 months ago
-- 🟢 [metalsmith-imagemin](https://github.com/ahmadnassri/metalsmith-imagemin) - 29 weekly downloads - Updated 7 months ago
-- 🟢 [metalsmith-if](https://github.com/deltamualpha/metalsmith-if) - 180 weekly downloads - Updated over 1 year ago
-- 🟢 [metalsmith-move-up](https://github.com/mcdonnelldean/metalsmith-move-up) - 15 weekly downloads - Updated over 1 year ago
-- 🟢 [metalsmith-pagination](https://github.com/blakeembrey/metalsmith-pagination) - 37 weekly downloads - Updated over 1 year ago
-- 🟢 [metalsmith-gzip](https://github.com/ludovicofischer/metalsmith-gzip) - 27 weekly downloads - Updated almost 2 years ago
+- 🟢 [metalsmith-paths](https://github.com/ahmadnassri/metalsmith-paths) - 38 weekly downloads - Updated 7 months ago
+- 🟢 [metalsmith-imagemin](https://github.com/ahmadnassri/metalsmith-imagemin) - 28 weekly downloads - Updated 7 months ago
+- 🟢 [metalsmith-collections](https://github.com/segmentio/metalsmith-collections) - 1,258 weekly downloads - Updated 9 months ago
+- 🟢 [metalsmith-ignore](https://github.com/segmentio/metalsmith-ignore) - 636 weekly downloads - Updated 9 months ago
+- 🟢 [metalsmith-drafts](https://github.com/segmentio/metalsmith-drafts) - 27 weekly downloads - Updated 9 months ago
+- 🟢 [metalsmith-in-place](https://github.com/superwolff/metalsmith-in-place) - 847 weekly downloads - Updated 9 months ago
+- 🟢 [metalsmith-if](https://github.com/deltamualpha/metalsmith-if) - 216 weekly downloads - Updated over 1 year ago
+- 🟢 [metalsmith-move-up](https://github.com/mcdonnelldean/metalsmith-move-up) - 14 weekly downloads - Updated over 1 year ago
+- 🟢 [metalsmith-pagination](https://github.com/blakeembrey/metalsmith-pagination) - 36 weekly downloads - Updated over 1 year ago
+- 🟢 [metalsmith-gzip](https://github.com/ludovicofischer/metalsmith-gzip) - 26 weekly downloads - Updated almost 2 years ago
 
 ## 🟡 Plugins Needing Attention (2-5 years)
 
 - 🟡 [metalsmith-project-images](https://github.com/hoetmaaiers/metalsmith-project-images) - Last updated about 2 years ago
+- 🟡 [metalsmith-metadata](https://github.com/segmentio/metalsmith-metadata) - Last updated about 2 years ago
+- 🟡 [metalsmith-markdown](https://github.com/segmentio/metalsmith-markdown) - Last updated about 2 years ago
 - 🟡 [metalsmith-jstransformer](https://github.com/RobLoach/metalsmith-jstransformer) - Last updated over 2 years ago
 - 🟡 [metalsmith-html-minifier](https://github.com/whymarrh/metalsmith-html-minifier) - Last updated over 2 years ago
+- 🟡 [metalsmith-pdf](https://github.com/FakeYou/metalsmith-pdf) - Last updated over 2 years ago
 - 🟡 [metalsmith-pdf](https://github.com/jjclark1982/metalsmith-pdf) - Last updated over 2 years ago
 - 🟡 [metalsmith-twig](https://github.com/PKuebler/metalsmith-twig) - Last updated almost 3 years ago
 - 🟡 [metalsmith-rss](https://github.com/MoOx/metalsmith-rss) - Last updated about 3 years ago
 - 🟡 [metalsmith-convert](https://github.com/tomterl/metalsmith-convert) - Last updated about 3 years ago
 - 🟡 [metalsmith-wordcloud](https://github.com/ericstiles/metalsmith-wordcloud) - Last updated over 3 years ago
 - 🟡 [metalsmith-sass](https://github.com/stevenschobert/metalsmith-sass) - Last updated over 3 years ago
+- 🟡 [metalsmith-excerpts](https://github.com/segmentio/metalsmith-excerpts) - Last updated over 3 years ago
+- 🟡 [metalsmith-logo](https://github.com/segmentio/metalsmith-logo) - Last updated over 3 years ago
 - 🟡 [metalsmith-express](https://github.com/chiefy/metalsmith-express) - Last updated almost 4 years ago
 - 🟡 [metalsmith-versioned-posts](https://github.com/wilson428/metalsmith-versioned-posts) - Last updated almost 4 years ago
 - 🟡 [metalsmith-validate](https://github.com/mikestopcontinues/metalsmith-validate) - Last updated over 4 years ago
@@ -154,6 +92,7 @@
 - 🟡 [metalsmith-css-packer](https://github.com/stafyniaksacha/metalsmith-css-packer) ⚠️ - Last updated over 4 years ago
 - 🟡 [metalsmith-register-helpers](https://github.com/losttype/metalsmith-register-helpers) - Last updated over 4 years ago
 - 🟡 [metalsmith-icons](https://github.com/colophonemes/metalsmith-icons) - Last updated almost 5 years ago
+- 🟡 [metalsmith-mapsite](https://github.com/superwolff/metalsmith-mapsite) - Last updated almost 5 years ago
 - 🟡 [metalsmith-mapsite](https://github.com/quercy/metalsmith-mapsite) - Last updated almost 5 years ago
 - 🟡 [metalsmith-pandoc](https://github.com/arve0/metalsmith-pandoc) - Last updated almost 5 years ago
 
@@ -161,6 +100,9 @@
 
 - 🔴 [metalsmith-html-postcss](https://github.com/devinus/metalsmith-html-postcss) - Last updated about 5 years ago
 - 🔴 [metalsmith-jquery](https://github.com/manheim/metalsmith-jquery) - Last updated about 5 years ago
+- 🔴 [metalsmith-tags](https://github.com/hrehfeld/metalsmith-tags) - Last updated about 5 years ago
+- 🔴 [metalsmith-tags](https://github.com/lasar/metalsmith-tags) - Last updated about 5 years ago
+- 🔴 [metalsmith-tags](https://github.com/sarahhenderson/metalsmith-tags) - Last updated about 5 years ago
 - 🔴 [metalsmith-tags](https://github.com/totocaster/metalsmith-tags) - Last updated about 5 years ago
 - 🔴 [metalsmith-js-packer](https://github.com/stafyniaksacha/metalsmith-js-packer) ⚠️ - Last updated over 5 years ago
 - 🔴 [metalsmith-congregate](https://github.com/trychameleon/metalsmith-congregate) - Last updated over 5 years ago
@@ -189,7 +131,9 @@
 - 🔴 [metalsmith-url](https://github.com/MoOx/metalsmith-url) - Last updated over 7 years ago
 - 🔴 [metalsmith-debug](https://github.com/mahnunchik/metalsmith-debug) - Last updated over 7 years ago
 - 🔴 [metalsmith-elevate](https://github.com/tylersticka/metalsmith-elevate) - Last updated almost 8 years ago
+- 🔴 [metalsmith-webpack](https://github.com/christophercliff/metalsmith-webpack) - Last updated almost 8 years ago
 - 🔴 [metalsmith-webpack](https://github.com/nealgranger/metalsmith-webpack) - Last updated almost 8 years ago
+- 🔴 [metalsmith-headings](https://github.com/segmentio/metalsmith-headings) - Last updated about 8 years ago
 - 🔴 [metalsmith-jstransformer-partials](https://github.com/RobLoach/metalsmith-jstransformer-partials) - Last updated about 8 years ago
 - 🔴 [metalsmith-snippet](https://github.com/blakeembrey/metalsmith-snippet) - Last updated about 8 years ago
 - 🔴 [metalsmith-suitcss](https://github.com/jeffjewiss/metalsmith-suitcss) - Last updated about 8 years ago
@@ -197,8 +141,11 @@
 - 🔴 [metalsmith-related](https://github.com/radekstepan/metalsmith-related) - Last updated over 8 years ago
 - 🔴 [metalsmith-loader](https://github.com/yeojz/metalsmith-loader) - Last updated over 8 years ago
 - 🔴 [metalsmith-slug](https://github.com/nsonnad/metalsmith-slug) - Last updated over 8 years ago
+- 🔴 [metalsmith-gulp-boilerplate](https://github.com/charlespeters/metalsmith-gulp-boilerplate) 📦 - Last updated over 8 years ago
 - 🔴 [metalsmith-gulp-boilerplate](https://github.com/radiovisual/metalsmith-gulp-boilerplate) 📦 - Last updated over 8 years ago
 - 🔴 [metalsmith-stylus](https://github.com/esundahl/metalsmith-stylus) - Last updated over 8 years ago
+- 🔴 [metalsmith-boilerplate](https://github.com/budparr/metalsmith-boilerplate) 📦 - Last updated over 8 years ago
+- 🔴 [metalsmith-boilerplate](https://github.com/Nadeeshyama/metalsmith-boilerplate) 📦 - Last updated over 8 years ago
 - 🔴 [metalsmith-boilerplate](https://github.com/FalloutX/metalsmith-boilerplate) 📦 - Last updated over 8 years ago
 - 🔴 [metalsmith-branch](https://github.com/ericgj/metalsmith-branch) - Last updated over 8 years ago
 - 🔴 [metalsmith-rootpath](https://github.com/radiovisual/metalsmith-rootpath) - Last updated over 8 years ago
@@ -220,6 +167,7 @@
 - 🔴 [metalsmith-hbs](https://github.com/wangsai/metalsmith-hbs) - Last updated over 9 years ago
 - 🔴 [metalsmith-sense](https://github.com/rstacruz/metalsmith-sense) - Last updated over 9 years ago
 - 🔴 [metalsmith-metafiles](https://github.com/Ajedi32/metalsmith-metafiles) 📦 - Last updated over 9 years ago
+- 🔴 [metalsmith-tutorial](https://github.com/bradcerasani/metalsmith-tutorial) - Last updated over 9 years ago
 - 🔴 [metalsmith-tutorial](https://github.com/RobinThrift/metalsmith-tutorial) - Last updated over 9 years ago
 - 🔴 [metalsmith-replace](https://github.com/Treri/metalsmith-replace) - Last updated over 9 years ago
 - 🔴 [metalsmith-base](https://github.com/evocode/metalsmith-base) 📦 - Last updated over 9 years ago
@@ -268,6 +216,7 @@
 - 🔴 [metalsmith-timer](https://github.com/deltamualpha/metalsmith-timer) - Last updated about 10 years ago
 - 🔴 [metalsmith-talk](https://github.com/danielhusar/metalsmith-talk) - Last updated about 10 years ago
 - 🔴 [metalsmith-jekyll](https://github.com/danielhusar/metalsmith-jekyll) - Last updated about 10 years ago
+- 🔴 [metalsmith-starter](https://github.com/JimmyMultani/metalsmith-starter) - Last updated about 10 years ago
 - 🔴 [metalsmith-starter](https://github.com/dinkco/metalsmith-starter) - Last updated about 10 years ago
 - 🔴 [metalsmith-writemetadata](https://github.com/Waxolunist/metalsmith-writemetadata) - Last updated about 10 years ago
 - 🔴 [metalsmith-highlight](https://github.com/hbsnow/metalsmith-highlight) - Last updated about 10 years ago
@@ -283,7 +232,12 @@
 - 🔴 [metalsmith-date-formatter](https://github.com/hellatan/metalsmith-date-formatter) - Last updated about 10 years ago
 - 🔴 [metalsmith-lowercase-paths](https://github.com/ekristen/metalsmith-lowercase-paths) - Last updated about 10 years ago
 - 🔴 [metalsmith-page-titles](https://github.com/hellatan/metalsmith-page-titles) - Last updated about 10 years ago
+- 🔴 [metalsmith-test](https://github.com/bapti/metalsmith-test) - Last updated about 10 years ago
+- 🔴 [metalsmith-test](https://github.com/biilmann/metalsmith-test) - Last updated about 10 years ago
+- 🔴 [metalsmith-test](https://github.com/claycarpenter/metalsmith-test) - Last updated about 10 years ago
 - 🔴 [metalsmith-test](https://github.com/thedustinsmith/metalsmith-test) - Last updated about 10 years ago
+- 🔴 [metalsmith-demo](https://github.com/bchavezgd/metalsmith-demo) - Last updated over 10 years ago
+- 🔴 [metalsmith-demo](https://github.com/jaredblyth/metalsmith-demo) - Last updated over 10 years ago
 - 🔴 [metalsmith-demo](https://github.com/kristianmandrup/metalsmith-demo) - Last updated over 10 years ago
 - 🔴 [metalsmith-ids](https://github.com/varagoras/metalsmith-ids) - Last updated over 10 years ago
 - 🔴 [metalsmith-sample02](https://github.com/maruLoop/metalsmith-sample02) - Last updated over 10 years ago
@@ -305,6 +259,7 @@
 - 🔴 [metalsmith-pretty-serve](https://github.com/mpd106/metalsmith-pretty-serve) - Last updated over 10 years ago
 - 🔴 [metalsmith-only](https://github.com/Treri/metalsmith-only) - Last updated over 10 years ago
 - 🔴 [metalsmith-except](https://github.com/Treri/metalsmith-except) - Last updated over 10 years ago
+- 🔴 [metalsmith-env](https://github.com/kalamuna/metalsmith-env) - Last updated over 10 years ago
 - 🔴 [metalsmith-env](https://github.com/yhikishima/metalsmith-env) - Last updated over 10 years ago
 - 🔴 [metalsmith-feed-ingest](https://github.com/madeofpeople/metalsmith-feed-ingest) ⚠️ - Last updated over 10 years ago
 - 🔴 [metalsmith-simplewatch](https://github.com/christophercliff/metalsmith-simplewatch) - Last updated over 10 years ago
@@ -328,9 +283,13 @@
 - 🔴 [metalsmith-paginate](https://github.com/RobinThrift/metalsmith-paginate) - Last updated almost 11 years ago
 - 🔴 [metalsmith-mtime](https://github.com/jkuczm/metalsmith-mtime) - Last updated almost 11 years ago
 - 🔴 [metalsmith-sections](https://github.com/lotaris/metalsmith-sections) - Last updated almost 11 years ago
+- 🔴 [metalsmith-browserify](https://github.com/mpd106/metalsmith-browserify) - Last updated almost 11 years ago
 - 🔴 [metalsmith-browserify](https://github.com/nsonnad/metalsmith-browserify) - Last updated almost 11 years ago
 - 🔴 [metalsmith-jekyll-test](https://github.com/matthewmueller/metalsmith-jekyll-test) - Last updated almost 11 years ago
 - 🔴 [metalsmith-learn](https://github.com/BretFisher/metalsmith-learn) - Last updated almost 11 years ago
+- 🔴 [metalsmith-example](https://github.com/JSila/metalsmith-example) - Last updated almost 11 years ago
+- 🔴 [metalsmith-example](https://github.com/tcoats/metalsmith-example) - Last updated almost 11 years ago
+- 🔴 [metalsmith-example](https://github.com/trint-it/metalsmith-example) - Last updated almost 11 years ago
 - 🔴 [metalsmith-example](https://github.com/sjlu/metalsmith-example) - Last updated almost 11 years ago
 - 🔴 [metalsmith-express-gulp-boilerplate](https://github.com/marcelbeumer/metalsmith-express-gulp-boilerplate) 📦 - Last updated about 11 years ago
 - 🔴 [metalsmith-textile](https://github.com/jonhartmann/metalsmith-textile) - Last updated about 11 years ago
@@ -338,7 +297,7 @@
 - 🔴 [metalsmith-filetype-marker](https://github.com/boushley/metalsmith-filetype-marker) - Last updated about 11 years ago
 - 🔴 [metalsmith-encode-html](https://github.com/jscheel/metalsmith-encode-html) - Last updated about 11 years ago
 - 🔴 [metalsmith-json](https://github.com/antiBaconMachine/metalsmith-json) 📦 - Last updated about 11 years ago
-- 🔴 [metalsmith-coffee](https://github.com/joaoafrmartins/metalsmith-coffee) - Last updated about 11 years ago
+- 🔴 [metalsmith-coffee](https://github.com/joaoafrmartins/metalsmith-coffee) - Last updated over 11 years ago
 - 🔴 [metalsmith-metaobject](https://github.com/akoenig/metalsmith-metaobject) 📦 - Last updated over 11 years ago
 - 🔴 [metalsmith-give](https://github.com/srcreigh/metalsmith-give) - Last updated over 11 years ago
 - 🔴 [metalsmith-htmlescape](https://github.com/damnit/metalsmith-htmlescape) - Last updated over 11 years ago
@@ -352,19 +311,20 @@
 ## 📁 Archived Plugins
 
 - 📁 [metalsmith-markdown-remarkable](https://github.com/attentif/metalsmith-markdown-remarkable) - Last updated about 1 year ago
+- 📁 [metalsmith-build-date](https://github.com/sarahhenderson/metalsmith-build-date) - Last updated about 2 years ago
 - 📁 [metalsmith-build-date](https://github.com/segmentio/metalsmith-build-date) - Last updated about 2 years ago
 - 📁 [metalsmith-jekyll-dates](https://github.com/fortes/metalsmith-jekyll-dates) - Last updated over 2 years ago
 - 📁 [metalsmith-alias](https://github.com/fortes/metalsmith-alias) - Last updated over 2 years ago
 - 📁 [metalsmith-code-highlight](https://github.com/fortes/metalsmith-code-highlight) - Last updated over 2 years ago
 - 📁 [metalsmith-serve](https://github.com/mayo/metalsmith-serve) - Last updated over 2 years ago
-- 📁 [metalsmith-hyphenate](https://github.com/saneef/metalsmith-hyphenate) - Last updated over 2 years ago
+- 📁 [metalsmith-hyphenate](https://github.com/saneef/metalsmith-hyphenate) - Last updated almost 3 years ago
 - 📁 [metalsmith-react](https://github.com/MoOx/metalsmith-react) - Last updated about 3 years ago
 - 📁 [metalsmith-autotoc](https://github.com/anatoo/metalsmith-autotoc) - Last updated over 3 years ago
 - 📁 [metalsmith-define](https://github.com/aymericbeaumet/metalsmith-define) - Last updated almost 5 years ago
 - 📁 [metalsmith-redirect](https://github.com/aymericbeaumet/metalsmith-redirect) - Last updated almost 5 years ago
 - 📁 [metalsmith-clean-css](https://github.com/aymericbeaumet/metalsmith-clean-css) - Last updated almost 5 years ago
 - 📁 [metalsmith-concat](https://github.com/aymericbeaumet/metalsmith-concat) - Last updated almost 5 years ago
-- 📁 [metalsmith-unexpected-markdown](https://github.com/unexpectedjs/metalsmith-unexpected-markdown) - Last updated about 5 years ago
+- 📁 [metalsmith-unexpected-markdown](https://github.com/unexpectedjs/metalsmith-unexpected-markdown) - Last updated over 5 years ago
 - 📁 [metalsmith-mingo](https://github.com/doup/metalsmith-mingo) - Last updated over 5 years ago
 - 📁 [metalsmith-multi-language](https://github.com/doup/metalsmith-multi-language) - Last updated over 5 years ago
 - 📁 [metalsmith-i18n](https://github.com/doup/metalsmith-i18n) - Last updated over 5 years ago
@@ -382,17 +342,20 @@
 - 📁 [metalsmith-mock](https://github.com/Availity/metalsmith-mock) - Last updated over 8 years ago
 - 📁 [metalsmith-jstransformer-layouts](https://github.com/RobLoach/metalsmith-jstransformer-layouts) - Last updated almost 9 years ago
 - 📁 [metalsmith-pooleapp](https://github.com/dpobel/metalsmith-pooleapp) - Last updated over 9 years ago
+- 📁 [metalsmith-blog](https://github.com/jsannerstedt/metalsmith-blog) - Last updated almost 10 years ago
 - 📁 [metalsmith-blog](https://github.com/s992/metalsmith-blog) - Last updated almost 10 years ago
 - 📁 [metalsmith-fingerprint](https://github.com/christophercliff/metalsmith-fingerprint) - Last updated almost 10 years ago
 - 📁 [metalsmith-dev](https://github.com/geoffb/metalsmith-dev) - Last updated almost 10 years ago
 - 📁 [metalsmith-mallet](https://github.com/aigarsdz/metalsmith-mallet) - Last updated about 10 years ago
 - 📁 [metalsmith-multiple-collections](https://github.com/ubenzer/metalsmith-multiple-collections) - Last updated about 10 years ago
 - 📁 [metalsmith-pattern-move](https://github.com/ubenzer/metalsmith-pattern-move) - Last updated about 10 years ago
+- 📁 [metalsmith-rho](https://github.com/inca/metalsmith-rho) - Last updated about 10 years ago
 - 📁 [metalsmith-rho](https://github.com/ubenzer/metalsmith-rho) - Last updated about 10 years ago
 - 📁 [metalsmith-myth](https://github.com/kasperisager/metalsmith-myth) - Last updated over 10 years ago
 - 📁 [metalsmith-react-ssr](https://github.com/mimiflynn/metalsmith-react-ssr) - Last updated over 10 years ago
 - 📁 [metalsmith-placeholder](https://github.com/mattly/metalsmith-placeholder) - Last updated over 10 years ago
 - 📁 [metalsmith-typography](https://github.com/algenon/metalsmith-typography) - Last updated over 10 years ago
+- 📁 [metalsmith-assets](https://github.com/treygriffith/metalsmith-assets) - Last updated over 10 years ago
 - 📁 [metalsmith-assetgraph](https://github.com/gustavnikolaj/metalsmith-assetgraph) - Last updated over 10 years ago
 - 📁 [metalsmith-partial](https://github.com/anatoo/metalsmith-partial) - Last updated over 10 years ago
 - 📁 [metalsmith-combine](https://github.com/kaizau/metalsmith-combine) - Last updated over 10 years ago
@@ -402,20 +365,55 @@
 - 📁 [metalsmith-presentation-slides](https://github.com/RobinThrift/metalsmith-presentation-slides) - Last updated about 11 years ago
 - 📁 [metalsmith-untemplatize](https://github.com/gillesfabio/metalsmith-untemplatize) - Last updated over 11 years ago
 
+## ⚪ Unknown Status
+
+- [metalsmith-appfog](https://github.com/miloskroulik/metalsmith-appfog)
+- [metalsmith-atom](https://github.com/mreynolds/metalsmith-atom)
+- [metalsmith-blog-bootstrap](https://github.com/s-stude/metalsmith-blog-bootstrap)
+- [metalsmith-boilerplates](https://github.com/superwolff/metalsmith-boilerplates)
+- [metalsmith-bug](https://github.com/Blooie/metalsmith-bug)
+- [metalsmith-contentful](https://github.com/jesseconnr/metalsmith-contentful)
+- [metalsmith-fingerprint-ignore](https://github.com/superwolff/metalsmith-fingerprint-ignore)
+- [metalsmith-glob-meta](https://github.com/ksmithut/metalsmith-glob-meta)
+- [metalsmith-greenhouse](https://github.com/zalando/metalsmith-greenhouse)
+- [metalsmith-handlebars-content](https://github.com/kwizzn/metalsmith-handlebars-content)
+- [metalsmith-hbt](https://github.com/Citytechinc/metalsmith-hbt)
+- [metalsmith-hideshow](https://github.com/evoja/metalsmith-hideshow)
+- [metalsmith-kss](https://github.com/kwizzn/metalsmith-kss)
+- [metalsmith-moment](https://github.com/lasar/metalsmith-moment)
+- [metalsmith-playground](https://github.com/maxild/metalsmith-playground)
+- [metalsmith-prefixoid](https://github.com/evoja/metalsmith-prefixoid)
+- [metalsmith-prismic-gub](https://github.com/everydayhero/metalsmith-prismic-gub)
+- [metalsmith-project-template](https://github.com/fellswoop/metalsmith-project-template)
+- [metalsmith-proxy](https://github.com/ehaskins/metalsmith-proxy)
+- [metalsmith-save-original-location](https://github.com/ubenzer/metalsmith-save-original-location)
+- [metalsmith-scaffold](https://github.com/dead-poet/metalsmith-scaffold)
+- [metalsmith-server-watch](https://github.com/frank06/metalsmith-server-watch)
+- [metalsmith-tc-atom](https://github.com/tcurdt/metalsmith-tc-atom)
+- [metalsmith-tc-sitemap](https://github.com/tcurdt/metalsmith-tc-sitemap)
+- [metalsmith-title](https://github.com/OzzyCzech/metalsmith-title)
+- [metalsmith-travis-appfog-test](https://github.com/miloskroulik/metalsmith-travis-appfog-test)
+- [metalsmith-typogr](https://github.com/colophonemes/metalsmith-typogr)
+- [metalsmith-typogr](https://github.com/xbonell/metalsmith-typogr)
+- [metalsmith-website](https://github.com/kaharrs2/metalsmith-website)
+- [metalsmith-xo](https://github.com/blainsmith/metalsmith-xo)
+- [metalsmith-yaml](https://github.com/astralfrontier/metalsmith-yaml)
+- [metalsmith-yaml2json](https://github.com/nicklasmoeller/metalsmith-yaml2json)
+
 ## Statistics
 
-- Total plugins: 290
+- Total plugins: 359
 - Core plugins: 10
-- Community plugins: 280
+- Community plugins: 349
 
 ### Community Plugin Health
-- Up-to-date: 23 (8%)
-- Needing attention: 18 (6%)
-- Uncertain: 189 (68%)
-- Archived: 50 (18%)
-- Unknown: 0 (0%)
+- Up-to-date: 30 (9%)
+- Needing attention: 24 (7%)
+- Uncertain: 209 (60%)
+- Archived: 54 (15%)
+- Unknown: 32 (9%)
 
 ### Security Analysis
-- Plugins analyzed for dependencies: 227
+- Plugins analyzed for dependencies: 237
 - Plugins with security concerns: 6
 - Plugins with outdated dependencies: 15
