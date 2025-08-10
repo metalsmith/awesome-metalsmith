@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 
-const { execSync, spawn } = require('child_process');
+const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const config = require('./config.json');
 
-// Cross-platform script to run plugin health check and create PR
+// Cross-platform script to run plugin health check and commit changes
 // Works on Windows, macOS, and Linux
 
 console.log('🚀 Starting plugin health update process...\n');
@@ -27,61 +28,38 @@ function runCommand(command, options = {}) {
   }
 }
 
-// Check if gh CLI is authenticated
-console.log('🔐 Checking GitHub CLI authentication...');
-const authStatus = runCommand('gh auth status', { silent: true, allowFailure: true });
-if (!authStatus) {
-  console.error('❌ Error: GitHub CLI not authenticated');
-  console.error('Run: gh auth login');
-  process.exit(1);
-}
-console.log('✅ GitHub CLI authenticated\n');
-
-// Get current branch name
-const currentBranch = runCommand('git branch --show-current', { silent: true }).trim();
-console.log(`📍 Current branch: ${currentBranch}`);
-
-// Ensure we're on main/master branch and up to date
-const mainBranch = currentBranch === 'master' ? 'master' : 'main';
-console.log(`📥 Updating ${mainBranch} branch...`);
-
-if (currentBranch !== mainBranch) {
-  runCommand(`git checkout ${mainBranch}`);
-}
-runCommand(`git pull origin ${mainBranch}`);
-
-// Create a new branch with timestamp
-const timestamp = new Date().toISOString().split('T')[0].replace(/-/g, '');
-const branchName = `update-plugin-health-${timestamp}`;
-console.log(`🌿 Creating branch: ${branchName}`);
-runCommand(`git checkout -b "${branchName}"`);
-
 // Run the health check
 console.log('🔍 Analyzing plugin health...');
 runCommand('npm run health-check');
 
 // Check if there are changes
 const gitStatus = runCommand('git status --porcelain', { silent: true });
-const hasChanges = gitStatus.includes('PLUGINS.md');
+const hasChanges = gitStatus.includes(path.basename(config.paths.pluginsMarkdown));
 
 if (!hasChanges) {
-  console.log('ℹ️  No changes detected in PLUGINS.md');
-  runCommand(`git checkout ${mainBranch}`);
-  runCommand(`git branch -D "${branchName}"`);
+  console.log(`ℹ️  No changes detected in ${config.paths.pluginsMarkdown}`);
+  console.log('✅ Health check complete - no updates needed');
   process.exit(0);
 }
 
 // Show statistics from the report
-if (fs.existsSync('plugin-health-report.json')) {
+if (fs.existsSync(config.paths.healthReport)) {
   try {
-    const report = JSON.parse(fs.readFileSync('plugin-health-report.json', 'utf8'));
+    const report = JSON.parse(fs.readFileSync(config.paths.healthReport, 'utf8'));
     const stats = report.statistics;
     console.log('\n📊 Health Statistics:');
     console.log(`  Total plugins: ${report.totalPlugins}`);
-    console.log(`  🟢 Healthy: ${stats.healthy}`);
-    console.log(`  🟡 Concerning: ${stats.concerning}`);
-    console.log(`  🔴 Problematic: ${stats.problematic}`);
-    console.log(`  ⚪ Unknown: ${stats.unknown}\n`);
+    
+    if (stats.upToDate !== undefined) {
+      console.log(`  🟢 Up-to-date: ${stats.upToDate}`);
+      console.log(`  🟡 Needing attention: ${stats.needingAttention}`);
+      console.log(`  🔴 Uncertain: ${stats.uncertain}`);
+      console.log(`  📁 Archived: ${stats.archived}`);
+      if (stats.unknown > 0) {
+        console.log(`  ⚠️  404 repositories: ${stats.unknown} (not listed)`);
+      }
+      console.log('');
+    }
   } catch (error) {
     console.log('⚠️  Could not read health report statistics\n');
   }
@@ -90,48 +68,31 @@ if (fs.existsSync('plugin-health-report.json')) {
 // Commit changes
 const date = new Date().toISOString().split('T')[0];
 console.log('💾 Committing changes...');
-runCommand('git add PLUGINS.md');
+
+// Add the PLUGINS.md file
+runCommand(`git add ${config.paths.pluginsMarkdown}`);
+
+// Add health report if it exists
+if (fs.existsSync(config.paths.healthReport)) {
+  runCommand(`git add ${config.paths.healthReport}`);
+}
+
+// Commit with descriptive message
 runCommand(`git commit -m "chore: update plugin health indicators
 
-Monthly automated health check for all Metalsmith plugins.
+Automated health check for all Metalsmith plugins.
 Updated ${date}"`);
 
-// Push to remote
-console.log('📤 Pushing to GitHub...');
-runCommand(`git push origin "${branchName}"`);
+// Push to remote origin
+console.log('📤 Pushing changes to origin...');
+runCommand('git push origin');
 
-// Create pull request
-console.log('🔄 Creating pull request...');
-const prBody = `## Plugin Health Analysis Results
+// Get current branch name
+const currentBranch = runCommand('git branch --show-current', { silent: true }).trim();
 
-This automated analysis updates the health indicators for all plugins in PLUGINS.md.
-
-### Health Indicators
-- 🟢 **Healthy**: Actively maintained with recent commits and good adoption
-- 🟡 **Concerning**: Some maintenance activity but may have issues  
-- 🔴 **Problematic**: Likely abandoned or deprecated
-- ⚪ **Unknown**: Unable to determine health status
-
-### Analysis Based On
-- Recent commit activity (last 12 months)
-- Issue response patterns
-- npm download statistics
-- Overall maintenance status
-
-Generated on ${date}`;
-
-// Write PR body to temp file to handle multiline content cross-platform
-const tempFile = path.join(__dirname, 'temp-pr-body.txt');
-fs.writeFileSync(tempFile, prBody);
-
-try {
-  runCommand(`gh pr create --title "Update Plugin Health Indicators (${date})" --body-file "${tempFile}" --base ${mainBranch}`);
-  
-  console.log('\n✅ Success! Pull request created.');
-  console.log('   Review and merge at: https://github.com/metalsmith/awesome-metalsmith/pulls');
-} finally {
-  // Clean up temp file
-  if (fs.existsSync(tempFile)) {
-    fs.unlinkSync(tempFile);
-  }
-}
+console.log('\n✅ Success! Plugin health data updated and pushed to origin.');
+console.log(`   Changes committed to current branch: ${currentBranch}`);
+console.log('\n📋 Next steps:');
+console.log('   1. Review the changes in your local repository');
+console.log('   2. Create a pull request manually if needed');
+console.log('   3. Merge with upstream when ready');

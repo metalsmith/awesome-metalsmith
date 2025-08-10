@@ -2,6 +2,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const axios = require('axios');
 const { formatDistanceToNow, differenceInDays } = require('date-fns');
+const config = require('./config.json');
 
 // Load environment variables from .env file if it exists
 try {
@@ -72,6 +73,7 @@ class PluginHealthAnalyzer {
   }
 
   async run() {
+    this.startTime = Date.now();
     try {
       console.log('🚀 Starting plugin health analysis...\n');
       
@@ -127,7 +129,13 @@ class PluginHealthAnalyzer {
       // Generate updated markdown
       await this.generateUpdatedMarkdown();
       
+      const endTime = Date.now();
+      const durationSeconds = Math.round((endTime - this.startTime) / 1000);
+      const durationMinutes = Math.floor(durationSeconds / 60);
+      const remainingSeconds = durationSeconds % 60;
+      
       console.log('\n✅ Plugin health analysis complete!');
+      console.log(`⏱️  Total scan time: ${durationMinutes > 0 ? `${durationMinutes}m ` : ''}${remainingSeconds}s`);
       
     } catch (error) {
       console.error('❌ Error during analysis:', error.message);
@@ -136,7 +144,7 @@ class PluginHealthAnalyzer {
   }
 
   async parsePluginsMarkdown() {
-    const content = await fs.readFile('PLUGINS.md', 'utf-8');
+    const content = await fs.readFile(config.paths.pluginsMarkdown, 'utf-8');
     const lines = content.split('\n');
     let inNewPluginsSection = false;
     
@@ -519,7 +527,7 @@ class PluginHealthAnalyzer {
   }
 
   async generateUpdatedMarkdown() {
-    console.log('\n📝 Generating updated PLUGINS.md...');
+    console.log(`\n📝 Generating updated ${config.paths.pluginsMarkdown}...`);
     
     // Core plugins (maintained by Metalsmith org)
     const corePlugins = [];
@@ -614,7 +622,7 @@ class PluginHealthAnalyzer {
     markdown += '- 🟡 **Needing attention**: Updated 2-5 years ago\n';
     markdown += '- 🔴 **Uncertain**: Updated more than 5 years ago\n';
     markdown += '- 📁 **Archived**: Repository is archived\n';
-    markdown += '- ⚪ **Unknown**: Unable to determine status\n\n';
+    markdown += '\n';
     markdown += '### Security Indicators\n\n';
     markdown += '- ⚠️ **Security concerns**: Known vulnerabilities or security issues\n';
     markdown += '- 📦 **Outdated dependencies**: Uses deprecated or outdated packages\n\n';
@@ -725,27 +733,22 @@ class PluginHealthAnalyzer {
       markdown += '\n';
     }
     
-    if (unknown.length > 0) {
-      markdown += '## ⚪ Unknown Status\n\n';
-      for (const plugin of unknown) {
-        markdown += `- [${plugin.name}](${plugin.url})\n`;
-      }
-      markdown += '\n';
-    }
-    
-    // Add statistics (excluding core plugins from percentages)
-    const communityPlugins = this.plugins.length - corePlugins.length;
+    // Add statistics (excluding core plugins and unknown/404 plugins from percentages)
+    const validCommunityPlugins = this.plugins.length - corePlugins.length - unknown.length;
     markdown += '## Statistics\n\n';
     markdown += `- Total plugins: ${this.plugins.length}\n`;
     markdown += `- Core plugins: ${corePlugins.length}\n`;
-    markdown += `- Community plugins: ${communityPlugins}\n\n`;
+    markdown += `- Community plugins: ${validCommunityPlugins}\n`;
+    if (unknown.length > 0) {
+      markdown += `- Repositories for ${unknown.length} plugins do not exist, resulting in 404s\n`;
+    }
+    markdown += '\n';
     markdown += '### Community Plugin Health\n';
-    if (communityPlugins > 0) {
-      markdown += `- Up-to-date: ${upToDate.length} (${Math.round(upToDate.length / communityPlugins * 100)}%)\n`;
-      markdown += `- Needing attention: ${needingAttention.length} (${Math.round(needingAttention.length / communityPlugins * 100)}%)\n`;
-      markdown += `- Uncertain: ${uncertain.length} (${Math.round(uncertain.length / communityPlugins * 100)}%)\n`;
-      markdown += `- Archived: ${archived.length} (${Math.round(archived.length / communityPlugins * 100)}%)\n`;
-      markdown += `- Unknown: ${unknown.length} (${Math.round(unknown.length / communityPlugins * 100)}%)\n`;
+    if (validCommunityPlugins > 0) {
+      markdown += `- Up-to-date: ${upToDate.length} (${Math.round(upToDate.length / validCommunityPlugins * 100)}%)\n`;
+      markdown += `- Needing attention: ${needingAttention.length} (${Math.round(needingAttention.length / validCommunityPlugins * 100)}%)\n`;
+      markdown += `- Uncertain: ${uncertain.length} (${Math.round(uncertain.length / validCommunityPlugins * 100)}%)\n`;
+      markdown += `- Archived: ${archived.length} (${Math.round(archived.length / validCommunityPlugins * 100)}%)\n`;
     }
     
     // Add security summary
@@ -771,18 +774,20 @@ class PluginHealthAnalyzer {
     markdown += `- Plugins with outdated dependencies: ${deprecatedDepsCount}\n`;
     
     // Write updated file
-    await fs.writeFile('PLUGINS.md', markdown);
+    await fs.writeFile(config.paths.pluginsMarkdown, markdown);
     
     // Also save detailed health data as JSON for debugging
     const healthReport = {
       timestamp: new Date().toISOString(),
+      scanDurationSeconds: Math.round((Date.now() - this.startTime) / 1000),
       totalPlugins: this.plugins.length,
       statistics: {
         upToDate: upToDate.length,
         needingAttention: needingAttention.length,
         uncertain: uncertain.length,
         archived: archived.length,
-        unknown: unknown.length,
+        unknown: unknown.length, // 404 repositories, not listed
+        validCommunityPlugins: validCommunityPlugins,
         securityAnalysis: {
           analyzed: analyzedCount,
           withSecurityConcerns: securityConcernsCount,
@@ -793,12 +798,12 @@ class PluginHealthAnalyzer {
     };
     
     await fs.writeFile(
-      'plugin-health-report.json',
+      config.paths.healthReport,
       JSON.stringify(healthReport, null, 2)
     );
     
-    console.log('✅ PLUGINS.md updated successfully');
-    console.log(`📊 Detailed report saved to plugin-health-report.json`);
+    console.log(`✅ ${config.paths.pluginsMarkdown} updated successfully`);
+    console.log(`📊 Detailed report saved to ${config.paths.healthReport}`);
   }
 
   updateRateLimits(headers) {

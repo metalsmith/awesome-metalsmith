@@ -9,7 +9,7 @@ A local tool to analyze the health of all Metalsmith plugins listed in PLUGINS.m
 npm install
 
 # Run health check and create PR (one command)
-./scripts/update-plugin-health.sh
+npm run update
 ```
 
 That's it! The script will analyze all plugins, update PLUGINS.md, and create a pull request.
@@ -17,6 +17,7 @@ That's it! The script will analyze all plugins, update PLUGINS.md, and create a 
 ## How It Works
 
 The health checker:
+
 1. **Parses PLUGINS.md** to extract all plugin repositories
 2. **Analyzes each plugin** using GitHub API and npm registry
 3. **Fetches package.json** from each repository for dependency analysis
@@ -49,6 +50,7 @@ The health checker:
 ## Prerequisites
 
 ### GitHub CLI Authentication
+
 The tool uses your GitHub CLI authentication automatically:
 
 ```bash
@@ -64,12 +66,15 @@ This provides the necessary API access without managing tokens.
 ## Usage Options
 
 ### Option 1: Automated Script (Recommended)
+
 ```bash
 ./scripts/update-plugin-health.sh
 ```
+
 This script handles everything: runs analysis, commits changes, creates PR.
 
 ### Option 2: Manual Steps
+
 ```bash
 # Run the analysis
 npm run health-check
@@ -89,6 +94,7 @@ gh pr create
 ```
 
 ### Option 3: Dry Run (Preview Only)
+
 ```bash
 # Preview without making changes
 npm run health-check:dry
@@ -133,10 +139,12 @@ The health checker now includes comprehensive security analysis:
 ### What It Checks
 
 1. **Known Security Vulnerabilities**
+
    - Flags packages with confirmed CVEs or security advisories (e.g., node-sass, request, har-validator, cryptiles)
    - These are packages that have documented security issues or have been deprecated due to security concerns
 
 2. **Outdated Dependencies**
+
    - Pre-1.0 version dependencies (often unstable)
    - Deprecated build tools (Gulp, Grunt, Bower)
    - Legacy packages (jQuery, CoffeeScript)
@@ -150,6 +158,7 @@ The health checker now includes comprehensive security analysis:
 ### Security Report
 
 The `plugin-health-report.json` includes detailed security information:
+
 ```json
 {
   "security": {
@@ -164,12 +173,13 @@ The `plugin-health-report.json` includes detailed security information:
 ### Interpreting Security Results
 
 - **⚠️ Security concerns**: Immediate attention recommended - contains packages with documented CVEs or security advisories
-- **📦 Outdated dependencies**: Consider updating - may affect stability/compatibility  
+- **📦 Outdated dependencies**: Consider updating - may affect stability/compatibility
 - **No badges**: Dependencies appear to be up-to-date and secure
 
 ## Monthly Maintenance Routine
 
 1. Run the update script monthly:
+
    ```bash
    ./scripts/update-plugin-health.sh
    ```
@@ -181,6 +191,7 @@ The `plugin-health-report.json` includes detailed security information:
 ## Handling Rate Limits
 
 The tool automatically uses your `gh` CLI authentication for API access:
+
 - **With auth**: 5,000 requests/hour (enough for all plugins)
 - **Without auth**: 60 requests/hour (fails after ~15 plugins)
 
@@ -189,17 +200,21 @@ If you see rate limit errors, ensure you're authenticated with `gh auth login`.
 ## Troubleshooting
 
 ### "GitHub CLI not authenticated"
+
 ```bash
 gh auth login
 ```
 
 ### "Rate limit exceeded"
+
 Make sure you're authenticated with GitHub CLI. The tool auto-detects gh auth.
 
 ### "No changes detected"
+
 The plugins haven't changed significantly since the last run.
 
 ### Script permission denied
+
 ```bash
 chmod +x scripts/update-plugin-health.sh
 ```
@@ -220,6 +235,7 @@ awesome-metalsmith/
 ## Contributing
 
 To improve the health checker:
+
 1. Modify the scoring algorithm in `scripts/analyze-plugin-health.js`
 2. Test with `npm run health-check:dry`
 3. Submit a PR with your improvements
