@@ -1,3 +1,5 @@
+[![MSeeP.ai Security Assessment Badge](https://mseep.net/pr/metalsmith-awesome-metalsmith-badge.png)](https://mseep.ai/app/metalsmith-awesome-metalsmith)
+
 # Awesome Metalsmith
 
 A curated collection of awesome [Metalsmith](https://metalsmith.io) resources, plugins, examples, and tutorials.
